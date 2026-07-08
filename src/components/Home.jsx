@@ -1,7 +1,12 @@
 import React from "react";
 import { WritingList } from "./Writing.jsx";
+import { POSTS } from "../lib/content/posts.js";
 
 export function Home() {
+  const allTags = [...new Set(POSTS.flatMap((p) => p.tags))];
+  const [active, setActive] = React.useState(null);
+  const shown = active ? POSTS.filter((p) => p.tags.includes(active)) : POSTS;
+
   return (
     <div>
       <section
@@ -29,8 +34,7 @@ export function Home() {
             maxWidth: "34rem",
           }}
         >
-          AI Quality &amp; Evals Engineer, writing about building the
-          verification systems that let teams trust AI-built software.
+          Notes on making AI-built software verifiable
         </p>
       </section>
 
@@ -38,25 +42,41 @@ export function Home() {
         <div
           style={{
             display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-            marginBottom: "var(--space-5)",
+            gap: "var(--space-2)",
+            marginBottom: "var(--space-2)",
           }}
         >
-          <h2
-            style={{ margin: 0, fontSize: "var(--text-2xl)", fontWeight: 600 }}
+          <button
+            onClick={() => setActive(null)}
+            style={filterStyle(active === null)}
           >
-            Writing
-          </h2>
-          <a
-            href="/writing"
-            style={{ fontSize: "var(--text-sm)", color: "var(--color-accent)" }}
-          >
-            All posts →
-          </a>
+            all
+          </button>
+          {allTags.map((t) => (
+            <button
+              key={t}
+              onClick={() => setActive(t)}
+              style={filterStyle(active === t)}
+            >
+              {t}
+            </button>
+          ))}
         </div>
-        <WritingList limit={5} />
+        <WritingList posts={shown} />
       </section>
     </div>
   );
+}
+
+function filterStyle(on) {
+  return {
+    fontFamily: "var(--font-mono)",
+    fontSize: "var(--text-xs)",
+    padding: "0.25rem 0.625rem",
+    borderRadius: "var(--radius-full)",
+    cursor: "pointer",
+    border: `1px solid ${on ? "var(--color-accent)" : "var(--color-border)"}`,
+    background: on ? "var(--color-accent-100)" : "transparent",
+    color: on ? "var(--color-accent-strong)" : "var(--color-text-muted)",
+  };
 }

@@ -1,10 +1,9 @@
 import React from "react";
 import { IconClock } from "../lib/ds/icons.jsx";
-import { POSTS, formatPostDate } from "../lib/content/posts.js";
+import { formatPostDate } from "../lib/content/posts.js";
 
-export function WritingList({ limit, posts }) {
-  const source = posts || POSTS;
-  const rows = limit ? source.slice(0, limit) : source;
+export function WritingList({ posts }) {
+  const rows = posts || [];
   if (rows.length === 0) {
     return (
       <p
@@ -23,7 +22,7 @@ export function WritingList({ limit, posts }) {
       {rows.map((p, i) => (
         <a
           key={p.id}
-          href={`/writing#${p.id}`}
+          href={`#${p.id}`}
           style={{
             display: "flex",
             alignItems: "baseline",
@@ -82,75 +81,4 @@ export function WritingList({ limit, posts }) {
       ))}
     </div>
   );
-}
-
-export function Writing() {
-  const allTags = [...new Set(POSTS.flatMap((p) => p.tags))];
-  const [active, setActive] = React.useState(null);
-  const shown = active ? POSTS.filter((p) => p.tags.includes(active)) : POSTS;
-
-  return (
-    <div style={{ padding: "var(--space-12) 0 var(--space-16)" }}>
-      <h1
-        style={{
-          margin: 0,
-          fontSize: "var(--text-3xl)",
-          fontWeight: 600,
-          letterSpacing: "var(--tracking-tight)",
-        }}
-      >
-        Writing
-      </h1>
-      <p
-        style={{
-          marginTop: "var(--space-3)",
-          fontSize: "var(--text-lg)",
-          color: "var(--color-text-muted)",
-          maxWidth: "34rem",
-        }}
-      >
-        Notes on making AI-built software verifiable — evals, gates, and audit
-        trails.
-      </p>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "var(--space-2)",
-          margin: "var(--space-8) 0 var(--space-2)",
-        }}
-      >
-        <button
-          onClick={() => setActive(null)}
-          style={filterStyle(active === null)}
-        >
-          all
-        </button>
-        {allTags.map((t) => (
-          <button
-            key={t}
-            onClick={() => setActive(t)}
-            style={filterStyle(active === t)}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
-
-      <WritingList posts={shown} />
-    </div>
-  );
-}
-
-function filterStyle(on) {
-  return {
-    fontFamily: "var(--font-mono)",
-    fontSize: "var(--text-xs)",
-    padding: "0.25rem 0.625rem",
-    borderRadius: "var(--radius-full)",
-    cursor: "pointer",
-    border: `1px solid ${on ? "var(--color-accent)" : "var(--color-border)"}`,
-    background: on ? "var(--color-accent-100)" : "transparent",
-    color: on ? "var(--color-accent-strong)" : "var(--color-text-muted)",
-  };
 }

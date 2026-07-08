@@ -4,7 +4,6 @@ import { IconMoon, IconSun } from "../lib/ds/icons.jsx";
 
 const NAV = [
   { href: "/", label: "Home" },
-  { href: "/writing", label: "Writing" },
   { href: "/about", label: "About" },
 ];
 
