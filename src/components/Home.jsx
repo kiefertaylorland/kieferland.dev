@@ -47,6 +47,8 @@ export function Home() {
           }}
         >
           <button
+            type="button"
+            aria-pressed={active === null}
             onClick={() => setActive(null)}
             style={filterStyle(active === null)}
           >
@@ -55,6 +57,8 @@ export function Home() {
           {allTags.map((t) => (
             <button
               key={t}
+              type="button"
+              aria-pressed={active === t}
               onClick={() => setActive(t)}
               style={filterStyle(active === t)}
             >

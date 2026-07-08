@@ -22,6 +22,7 @@ export function WritingList({ posts }) {
       {rows.map((p, i) => (
         <a
           key={p.id}
+          id={p.id}
           href={`#${p.id}`}
           style={{
             display: "flex",
