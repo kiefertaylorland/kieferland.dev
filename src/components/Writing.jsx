@@ -22,7 +22,6 @@ export function WritingList({ posts }) {
       {rows.map((p, i) => (
         <a
           key={p.id}
-          id={p.id}
           href={`#${p.id}`}
           style={{
             display: "flex",
@@ -45,7 +44,7 @@ export function WritingList({ posts }) {
           >
             {formatPostDate(p.date)}
           </span>
-          <div style={{ flex: 1 }}>
+          <div id={p.id} style={{ flex: 1 }}>
             <div
               style={{
                 fontSize: "var(--text-lg)",
