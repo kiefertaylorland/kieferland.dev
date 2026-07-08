@@ -123,7 +123,7 @@ export function About() {
           borderBottom: "1px solid var(--color-border)",
         }}
       >
-        <Metric value="4+" label="Years at TCWGlobal" />
+        <Metric value="3" label="Years in software testing & QA" />
         <Metric value="7" label="Security certifications" tone="accent" />
         <Metric value="0" label="QA-attributed rollbacks" tone="pass" />
       </section>
