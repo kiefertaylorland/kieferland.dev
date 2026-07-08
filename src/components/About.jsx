@@ -8,7 +8,7 @@ import { IconGitHub, IconMail, IconArrowUpRight } from "../lib/ds/icons.jsx";
 const TIMELINE = [
   {
     year: "2026",
-    text: "Scaling QA throughput with Claude Code agentic workflows — custom /ship and /loop skills and MCP integrations, including an eval-graded custom skill scoring 100% vs. a 61.9% baseline. Shipped 6 side projects this year using autonomous agent pipelines with full CI gate discipline (+53K verified lines merged in a single month). Grew an internal Next.js/Supabase app's test suite from 316 to 940+ tests at 100% line+branch coverage on changed files, hardened with Stryker mutation testing (80% → ~94%), plus a live-database RLS integration suite.",
+    text: "Scaling QA throughput with Claude Code agentic workflows — custom /ship and /loop skills and MCP integrations, including an eval-graded custom skill scoring 100% vs. a 61.9% baseline. Grew an internal Next.js/Supabase app's test suite from 316 to 940+ tests at 100% line+branch coverage on changed files, hardened with Stryker mutation testing (80% → ~94%), plus a live-database RLS integration suite. Shipped 6 side projects this year using autonomous agent pipelines with full CI gate discipline (+53K verified lines merged in a single month).",
   },
   {
     year: "2025",
