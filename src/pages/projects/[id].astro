@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { ProjectDetail } from "../../components/ProjectDetail.jsx";
+import { PROJECTS } from "../../lib/content/projects.js";
+
+export function getStaticPaths() {
+	return Object.keys(PROJECTS).map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const project = PROJECTS[id];
+---
+
+<Layout title={`${project.title} — Kiefer Land`}>
+	<ProjectDetail id={id} client:load />
+</Layout>

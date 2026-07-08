@@ -1,0 +1,107 @@
+/*
+  Color tokens — 検証 (verification)
+  Ink-on-paper neutrals + one restrained 朱 (shu) vermillion accent used like a
+  hanko verification stamp. Separate muted semantics for gate pass/warn/fail so
+  they never compete with the accent.
+*/
+
+:root {
+  /* ---- Neutral scale (ink on paper — no pure black/white) ---- */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f7f6f4;
+  --color-neutral-100: #eeece8;
+  --color-neutral-200: #ddd9d2;
+  --color-neutral-300: #c2bcb1;
+  --color-neutral-400: #9c9385;
+  --color-neutral-500: #7a7263;
+  --color-neutral-600: #5b5548;
+  --color-neutral-700: #423d34;
+  --color-neutral-800: #2b2822;
+  --color-neutral-900: #1a1815;
+  --color-neutral-950: #0f0e0c;
+
+  /* ---- Accent: 朱 (shu) — hanko-stamp vermillion ---- */
+  --color-accent-50: #fdeeea;
+  --color-accent-200: #f3b3a2;
+  --color-accent-400: #e2634a;
+  --color-accent-500: #c8401e;
+  --color-accent-600: #a6321b;
+  --color-accent-700: #7f2617;
+
+  /* ---- Semantic gate states (distinct from the accent stamp) ---- */
+  --color-pass-500: #2f7d4f;
+  --color-pass-100: #e2f1e7;
+  --color-warn-500: #b1791a;
+  --color-warn-100: #f6ead2;
+  --color-fail-500: #b23a3a;
+  --color-fail-100: #f7e2e2;
+
+  /* ---- Semantic roles (light theme — the default reading surface) ---- */
+  --color-bg: var(--color-neutral-0);
+  --color-bg-subtle: var(--color-neutral-50);
+  --color-bg-inset: var(--color-neutral-100);
+  --color-border: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-300);
+  --color-text: var(--color-neutral-900);
+  --color-text-muted: var(--color-neutral-600);
+  --color-text-faint: var(--color-neutral-400);
+  --color-accent: var(--color-accent-500);
+  --color-accent-strong: var(--color-accent-600);
+  --color-accent-text: var(--color-neutral-0);
+  --color-focus-ring: var(--color-accent-500);
+}
+
+/* Dark mirrors the light surface rather than inverting its mood — same ink,
+   different paper. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-neutral-950);
+    --color-bg-subtle: var(--color-neutral-900);
+    --color-bg-inset: var(--color-neutral-800);
+    --color-border: var(--color-neutral-800);
+    --color-border-strong: var(--color-neutral-700);
+    --color-text: var(--color-neutral-50);
+    --color-text-muted: var(--color-neutral-300);
+    --color-text-faint: var(--color-neutral-500);
+    --color-accent: var(--color-accent-400);
+    --color-accent-strong: var(--color-accent-200);
+    --color-accent-text: var(--color-neutral-950);
+    --color-pass-100: #16281d;
+    --color-warn-100: #2e2410;
+    --color-fail-100: #2c1616;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: var(--color-neutral-950);
+  --color-bg-subtle: var(--color-neutral-900);
+  --color-bg-inset: var(--color-neutral-800);
+  --color-border: var(--color-neutral-800);
+  --color-border-strong: var(--color-neutral-700);
+  --color-text: var(--color-neutral-50);
+  --color-text-muted: var(--color-neutral-300);
+  --color-text-faint: var(--color-neutral-500);
+  --color-accent: var(--color-accent-400);
+  --color-accent-strong: var(--color-accent-200);
+  --color-accent-text: var(--color-neutral-950);
+  --color-pass-100: #16281d;
+  --color-warn-100: #2e2410;
+  --color-fail-100: #2c1616;
+}
+
+:root[data-theme="light"] {
+  --color-bg: var(--color-neutral-0);
+  --color-bg-subtle: var(--color-neutral-50);
+  --color-bg-inset: var(--color-neutral-100);
+  --color-border: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-300);
+  --color-text: var(--color-neutral-900);
+  --color-text-muted: var(--color-neutral-600);
+  --color-text-faint: var(--color-neutral-400);
+  --color-accent: var(--color-accent-500);
+  --color-accent-strong: var(--color-accent-600);
+  --color-accent-text: var(--color-neutral-0);
+  --color-pass-100: #e2f1e7;
+  --color-warn-100: #f6ead2;
+  --color-fail-100: #f7e2e2;
+}

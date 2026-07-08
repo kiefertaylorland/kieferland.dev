@@ -1,0 +1,6 @@
+/*
+  Fonts — clean system sans for reading, JetBrains Mono for code/data/metrics.
+  Inter and JetBrains Mono are shipped as webfonts so consumers render
+  identically to the site; the system stack remains as the immediate fallback.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");

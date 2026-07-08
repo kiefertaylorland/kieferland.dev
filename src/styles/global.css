@@ -1,0 +1,10 @@
+/*
+  kieferland.dev — Kiefer Land Design System (検証 / verification)
+  Global entry point. Consumers link this one file.
+  Keep this a list of @import lines only — no inline rules.
+*/
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/effects.css";
