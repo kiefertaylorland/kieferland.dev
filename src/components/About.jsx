@@ -67,11 +67,9 @@ export function About() {
               maxWidth: "40rem",
             }}
           >
-            I work on the boring, load-bearing part of AI software: the checks
-            that let a person put their name on work they did not type. The
-            thesis is simple — as agents write more of the code, the scarce
-            resource becomes verified trust, and someone has to build the
-            machinery that produces it.
+            As agents write more of the code, the scarce resource becomes
+            verified trust, and someone has to build the machinery that
+            produces it.
           </p>
           <div
             style={{
