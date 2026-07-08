@@ -57,6 +57,8 @@ export function Home() {
           </button>
           {allTags.map((t) => (
             <button
+              type="button"
+              aria-pressed={active === t}
               key={t}
               type="button"
               aria-pressed={active === t}
