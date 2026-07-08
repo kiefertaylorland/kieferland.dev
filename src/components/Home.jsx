@@ -49,6 +49,7 @@ export function Home() {
           <button
             type="button"
             aria-pressed={active === null}
+            aria-label="Filter by all posts"
             onClick={() => setActive(null)}
             style={filterStyle(active === null)}
           >
@@ -59,6 +60,7 @@ export function Home() {
               key={t}
               type="button"
               aria-pressed={active === t}
+              aria-label={`Filter by ${t}`}
               onClick={() => setActive(t)}
               style={filterStyle(active === t)}
             >
