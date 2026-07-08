@@ -20,64 +20,65 @@ export function WritingList({ posts }) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       {rows.map((p, i) => (
-        <a
-          key={p.id}
-          href={`/#${p.id}`}
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            gap: "var(--space-5)",
-            padding: "var(--space-4) 0",
-            borderTop: i === 0 ? "none" : "1px solid var(--color-border)",
-            textDecoration: "none",
-            color: "inherit",
-          }}
-        >
-          <span
+        <div key={p.id} id={p.id}>
+          <a
+            href={`/#${p.id}`}
             style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "var(--text-xs)",
-              color: "var(--color-text-faint)",
-              width: "5.5rem",
-              flexShrink: 0,
+              display: "flex",
+              alignItems: "baseline",
+              gap: "var(--space-5)",
+              padding: "var(--space-4) 0",
+              borderTop: i === 0 ? "none" : "1px solid var(--color-border)",
+              textDecoration: "none",
+              color: "inherit",
             }}
           >
-            {formatPostDate(p.date)}
-          </span>
-          <div id={p.id} style={{ flex: 1 }}>
-            <div
+            <span
               style={{
-                fontSize: "var(--text-lg)",
-                fontWeight: 500,
-                marginBottom: 2,
+                fontFamily: "var(--font-mono)",
+                fontSize: "var(--text-xs)",
+                color: "var(--color-text-faint)",
+                width: "5.5rem",
+                flexShrink: 0,
               }}
             >
-              {p.title}
+              {formatPostDate(p.date)}
+            </span>
+            <div style={{ flex: 1 }}>
+              <div
+                style={{
+                  fontSize: "var(--text-lg)",
+                  fontWeight: 500,
+                  marginBottom: 2,
+                }}
+              >
+                {p.title}
+              </div>
+              <div
+                style={{
+                  fontSize: "var(--text-sm)",
+                  color: "var(--color-text-muted)",
+                  lineHeight: "var(--leading-normal)",
+                }}
+              >
+                {p.excerpt}
+              </div>
             </div>
-            <div
+            <span
               style={{
-                fontSize: "var(--text-sm)",
-                color: "var(--color-text-muted)",
-                lineHeight: "var(--leading-normal)",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+                fontFamily: "var(--font-mono)",
+                fontSize: "var(--text-xs)",
+                color: "var(--color-text-faint)",
+                flexShrink: 0,
               }}
             >
-              {p.excerpt}
-            </div>
-          </div>
-          <span
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 4,
-              fontFamily: "var(--font-mono)",
-              fontSize: "var(--text-xs)",
-              color: "var(--color-text-faint)",
-              flexShrink: 0,
-            }}
-          >
-            <IconClock size={13} /> {p.read}
-          </span>
-        </a>
+              <IconClock size={13} /> {p.read}
+            </span>
+          </a>
+        </div>
       ))}
     </div>
   );
