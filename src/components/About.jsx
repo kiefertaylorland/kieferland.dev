@@ -3,20 +3,28 @@ import { Button } from "../lib/ds/core/Button.jsx";
 import { Metric } from "../lib/ds/data/Metric.jsx";
 import { Callout } from "../lib/ds/feedback/Callout.jsx";
 import { Stamp } from "../lib/ds/brand/Stamp.jsx";
-import { IconGitHub, IconMail } from "../lib/ds/icons.jsx";
+import { IconGitHub, IconMail, IconArrowUpRight } from "../lib/ds/icons.jsx";
 
 const TIMELINE = [
   {
     year: "2026",
-    text: "Building the verification layer — evals, gates, and audit trails for agent-built software.",
+    text: "Scaling QA throughput with Claude Code agentic workflows — custom /ship and /loop skills and MCP integrations, including an eval-graded custom skill scoring 100% vs. a 61.9% baseline. Shipped 6 side projects this year using autonomous agent pipelines with full CI gate discipline (+53K verified lines merged in a single month). Grew an internal Next.js/Supabase app's test suite from 316 to 940+ tests at 100% line+branch coverage on changed files, hardened with Stryker mutation testing (80% → ~94%), plus a live-database RLS integration suite.",
+  },
+  {
+    year: "2025",
+    text: "Built an AI-assisted test case generation system in ChatGPT with human oversight for requirements analysis, test planning, and scenario authoring — improving test coverage 35%. Used GitHub Copilot and VS Code Agent Mode to cut regression cycle time 50%.",
   },
   {
     year: "2024",
-    text: "Led quality for an agentic code platform; shipped the first merge-gate that required signed evidence.",
+    text: "Promoted to Software QA Engineer I at TCWGlobal — expanded API automation coverage 30% → 70% (Postman/Newman, Jenkins CI) and E2E automation 20% → 80% (Playwright). Earned an M.S. in Cybersecurity & Information Assurance from Western Governors University.",
   },
   {
-    year: "2021",
-    text: "Backend + infra. Learned that the test suite is the only documentation anyone trusts.",
+    year: "2023",
+    text: "Promoted to Software QA Analyst at TCWGlobal (Oct) — authored 150+ functional and edge-case regression scenarios and led QA through a PHP → Next.js/NestJS migration with zero rollbacks. Earned a B.S. in Cybersecurity & Information Assurance from Western Governors University.",
+  },
+  {
+    year: "2022",
+    text: "Started at TCWGlobal as an IT Support Technician (Feb) — built an IT asset management system (70% better inventory accuracy) and managed the lifecycle of 150+ devices with NIST 800-88–compliant data disposal. Promoted to Junior System Administrator (Dec) — automated MacBook provisioning with Jamf (60% faster new-hire setup) and led security hardening across 250+ Windows/Linux systems, sustaining 99%+ uptime.",
   },
 ];
 
@@ -75,7 +83,7 @@ export function About() {
             <Button
               variant="secondary"
               onClick={() => {
-                window.location.href = "https://github.com/kiertaylorland";
+                window.location.href = "https://github.com/kiefertaylorland";
               }}
             >
               <IconGitHub size={16} /> GitHub
@@ -83,7 +91,15 @@ export function About() {
             <Button
               variant="secondary"
               onClick={() => {
-                window.location.href = "mailto:kiefer.land@tcwglobal.com";
+                window.location.href = "https://linkedin.com/in/kieferland";
+              }}
+            >
+              <IconArrowUpRight size={16} /> LinkedIn
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                window.location.href = "mailto:kiefertaylorland@gmail.com";
               }}
             >
               <IconMail size={16} /> Email
@@ -109,9 +125,9 @@ export function About() {
           borderBottom: "1px solid var(--color-border)",
         }}
       >
-        <Metric value="5+" label="Years in quality" />
-        <Metric value="7" label="Gates in production" tone="accent" />
-        <Metric value="0" label="Escapes I'll admit to" tone="pass" />
+        <Metric value="4+" label="Years at TCWGlobal" />
+        <Metric value="7" label="Security certifications" tone="accent" />
+        <Metric value="0" label="QA-attributed rollbacks" tone="pass" />
       </section>
 
       <section style={{ marginTop: "var(--space-10)" }}>
@@ -140,7 +156,7 @@ export function About() {
                   fontFamily: "var(--font-mono)",
                   fontSize: "var(--text-sm)",
                   color: "var(--color-accent)",
-                  width: "3rem",
+                  width: "4.5rem",
                   flexShrink: 0,
                 }}
               >

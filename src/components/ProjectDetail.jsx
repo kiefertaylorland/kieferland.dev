@@ -10,16 +10,8 @@ import { GateStatus } from "../lib/ds/brand/GateStatus.jsx";
 import { IconGitHub, IconCheck } from "../lib/ds/icons.jsx";
 import { PROJECTS } from "../lib/content/projects.js";
 
-const GATE_CONFIG = `gate: evals
-require:
-  pass_rate: ">= 0.98"
-  regressions: 0
-  human_signoff: true
-quarantine:
-  flaky: allow   # never blocks merge`;
-
 export function ProjectDetail({ id }) {
-  const p = PROJECTS[id] || PROJECTS.gatekeeper;
+  const p = PROJECTS[id] || Object.values(PROJECTS)[0];
   const [signed, setSigned] = React.useState(false);
 
   const gates = p.gates.map((g) =>
@@ -198,9 +190,9 @@ export function ProjectDetail({ id }) {
               fontWeight: 600,
             }}
           >
-            Gate config
+            CI config
           </h3>
-          <CodeBlock filename="gatekeeper.yml">{GATE_CONFIG}</CodeBlock>
+          <CodeBlock filename={p.ciFilename}>{p.ciSnippet}</CodeBlock>
         </div>
         <div>
           <h3
@@ -219,7 +211,7 @@ export function ProjectDetail({ id }) {
           </Callout>
           <div style={{ marginTop: "var(--space-4)" }}>
             <a
-              href="https://github.com/kiertaylorland"
+              href={p.repoUrl}
               style={{
                 display: "inline-flex",
                 alignItems: "center",

@@ -12,12 +12,7 @@ export function SiteHeader({ currentPath = "/" }) {
   const [theme, setTheme] = React.useState(null);
 
   React.useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    const initial =
-      stored ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light");
+    const initial = localStorage.getItem("theme") || "light";
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
   }, []);

@@ -1,37 +1,50 @@
 export const PROJECTS = {
-  gatekeeper: {
-    title: "Gatekeeper",
+  "playwright-framework": {
+    title: "Playwright Framework",
     kanji: "検",
-    tagline: "A merge-gate that will not let unverified work through.",
+    tagline: "Enterprise-grade E2E test automation for e-commerce apps.",
     summary:
-      "Gatekeeper runs the full eval suite on every pull request, diffs findings against the last green build, and blocks the merge until a human signs the audit entry. Agents can open a hundred PRs a day; exactly one careful person has to sign each one — and only when the evidence is already green.",
+      "A Page Object Model framework in TypeScript with custom fixtures, covering 116+ tests across UI, API, and security scenarios for SauceDemo and Practice Software Testing. Global auth setup eliminates repeated login overhead, and CI runs a fast smoke suite on every push with a full cross-browser pass on demand.",
     year: "2026",
     role: "Design + build",
-    stack: ["TypeScript", "GitHub Actions", "SQLite", "React"],
+    stack: ["TypeScript", "Playwright", "GitHub Actions"],
+    repoUrl: "https://github.com/kiefertaylorland/playwright-framework",
+    ciFilename: ".github/workflows/ci.yml",
+    ciSnippet: `jobs:
+  lint-typecheck:
+    steps:
+      - run: npm run lint
+      - run: npm run typecheck
+
+  api-tests:
+    steps:
+      - run: npx playwright test --project=api --retries=2
+
+  e2e-smoke:
+    steps:
+      - run: npx playwright test --project=chromium --grep @smoke
+
+  cross-browser:            # workflow_dispatch only, non-gating
+    if: github.event_name == 'workflow_dispatch'
+    continue-on-error: true`,
     gates: [
       {
-        name: "Eval suite",
+        name: "Test suite",
         status: "pass",
-        value: "98.2%",
-        detail: "1,204 cases · 0 regressions vs. last green",
+        value: "116+ tests",
+        detail: "UI, API, and security scenarios",
       },
       {
-        name: "Type check",
+        name: "Cross-browser",
         status: "pass",
-        value: "clean",
-        detail: "strict, no new anys",
+        value: "3 engines",
+        detail: "Chromium, Firefox, WebKit",
       },
       {
-        name: "Contract tests",
+        name: "CI reporting",
         status: "pass",
-        value: "312 / 312",
-        detail: "provider + consumer",
-      },
-      {
-        name: "Flake watch",
-        status: "warn",
-        value: "1 quarantined",
-        detail: "does not block merge",
+        value: "Allure",
+        detail: "traces, screenshots, and video on failure",
       },
       {
         name: "Human sign-off",
@@ -40,33 +53,41 @@ export const PROJECTS = {
       },
     ],
   },
-  trace: {
-    title: "Trace",
+  "test-agent": {
+    title: "Test Agent",
     kanji: "証",
-    tagline: "The audit trail as a first-class product.",
+    tagline: "Plan. Approve. Ship. — QA automation with a human-approval gate.",
     summary:
-      "Trace records every agent action, prompt, and diff and links it to the gate that let it through. When something ships, you can replay exactly how it got there — the provenance that makes one signature trustworthy across many agents.",
-    year: "2025",
+      "Test Agent generates a step-by-step test plan from a PR, ticket, or feature description, then stops. You review the plan and approve or reject each step. Only approved steps run — no test executes without a human sign-off first.",
+    year: "2026",
     role: "Design + build",
-    stack: ["React", "ClickHouse", "OpenTelemetry"],
+    stack: ["Python", "PostgreSQL", "Docker"],
+    repoUrl: "https://github.com/kiefertaylorland/test_agent",
+    ciFilename: ".github/workflows/ci.yml",
+    ciSnippet: `jobs:
+  ci:
+    steps:
+      - run: uv sync --locked --extra dev
+      - run: uv run make lint
+      - run: uv run make typecheck
+      - run: uv run make test`,
     gates: [
       {
-        name: "Ingest lag",
+        name: "Approval gate",
         status: "pass",
-        value: "< 400ms",
-        detail: "p99, 1.2M events/day",
+        value: "plan → approve → execute",
+        detail: "no step runs before human sign-off",
       },
       {
-        name: "Replay parity",
+        name: "Lint + typecheck",
         status: "pass",
-        value: "100%",
-        detail: "byte-exact reconstruction",
+        value: "ruff + mypy strict",
+        detail: "gates every push to main",
       },
       {
-        name: "Schema drift",
-        status: "warn",
-        value: "2 fields",
-        detail: "backfill scheduled",
+        name: "Human sign-off",
+        status: "pending",
+        detail: "awaiting reviewer — you",
       },
     ],
   },

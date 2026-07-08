@@ -13,7 +13,7 @@ export function Badge({ children, tone = "neutral", style, ...rest }) {
       bd: "var(--color-border)",
     },
     accent: {
-      bg: "var(--color-accent-50)",
+      bg: "var(--color-accent-100)",
       fg: "var(--color-accent-strong)",
       bd: "var(--color-accent-200)",
     },

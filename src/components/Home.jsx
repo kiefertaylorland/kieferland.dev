@@ -9,7 +9,7 @@ import { IconArrowRight, IconArrowUpRight } from "../lib/ds/icons.jsx";
 import { WritingList } from "./Writing.jsx";
 import { PROJECTS } from "../lib/content/projects.js";
 
-const FLAGSHIPS = ["gatekeeper", "trace"];
+const FLAGSHIPS = ["test-agent", "playwright-framework"];
 
 export function Home() {
   return (
@@ -68,7 +68,7 @@ export function Home() {
             <Button
               size="lg"
               onClick={() => {
-                window.location.href = "/projects/gatekeeper";
+                window.location.href = `/projects/${FLAGSHIPS[0]}`;
               }}
             >
               See the flagship <IconArrowRight size={16} />
@@ -100,19 +100,24 @@ export function Home() {
         }}
       >
         <Metric
-          value="98.2%"
-          label="Eval pass rate"
+          value="70%"
+          label="API coverage"
           tone="pass"
-          sub="across 1,204 cases"
+          sub="Postman/Newman, up from 30%"
         />
         <Metric
-          value="0"
-          label="Prod escapes"
-          tone="accent"
-          sub="last 6 months"
+          value="80%"
+          label="E2E coverage"
+          tone="pass"
+          sub="Playwright, up from 20%"
         />
-        <Metric value="7" label="Gates shipped" sub="in production" />
-        <Metric value="1.2M" label="Actions audited" sub="fully replayable" />
+        <Metric
+          value="94%"
+          label="Mutation score"
+          tone="accent"
+          sub="Stryker, up from 80%"
+        />
+        <Metric value="0" label="QA-attributed rollbacks" sub="during major modernization cycles" />
       </section>
 
       {/* Flagship projects */}
@@ -156,9 +161,17 @@ export function Home() {
               <a
                 key={id}
                 href={`/projects/${id}`}
-                style={{ textDecoration: "none", color: "inherit" }}
+                style={{ textDecoration: "none", color: "inherit", height: "100%" }}
               >
-                <Card interactive padding="var(--space-6)">
+                <Card
+                  interactive
+                  padding="var(--space-6)"
+                  style={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
                   <div
                     style={{
                       display: "flex",
@@ -201,6 +214,7 @@ export function Home() {
                       fontSize: "var(--text-sm)",
                       color: "var(--color-text-muted)",
                       lineHeight: "var(--leading-normal)",
+                      flex: 1,
                     }}
                   >
                     {p.summary.split(".")[0] + "."}
@@ -218,7 +232,7 @@ export function Home() {
                       ))}
                     </div>
                     <Badge tone={allPass ? "pass" : "warn"}>
-                      {allPass ? "all gates pass" : "1 flaky gate"}
+                      {allPass ? "all gates pass" : "awaiting sign-off"}
                     </Badge>
                   </div>
                 </Card>

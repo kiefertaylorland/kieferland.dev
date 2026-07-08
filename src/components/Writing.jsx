@@ -5,6 +5,19 @@ import { POSTS, formatPostDate } from "../lib/content/posts.js";
 export function WritingList({ limit, posts }) {
   const source = posts || POSTS;
   const rows = limit ? source.slice(0, limit) : source;
+  if (rows.length === 0) {
+    return (
+      <p
+        style={{
+          fontSize: "var(--text-sm)",
+          color: "var(--color-text-muted)",
+          padding: "var(--space-4) 0",
+        }}
+      >
+        Nothing published yet — check back soon.
+      </p>
+    );
+  }
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       {rows.map((p, i) => (
@@ -137,7 +150,7 @@ function filterStyle(on) {
     borderRadius: "var(--radius-full)",
     cursor: "pointer",
     border: `1px solid ${on ? "var(--color-accent)" : "var(--color-border)"}`,
-    background: on ? "var(--color-accent-50)" : "transparent",
+    background: on ? "var(--color-accent-100)" : "transparent",
     color: on ? "var(--color-accent-strong)" : "var(--color-text-muted)",
   };
 }
