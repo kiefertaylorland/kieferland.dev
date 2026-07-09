@@ -14,6 +14,7 @@ export const POSTS = [
 export function formatPostDate(iso) {
   const d = new Date(iso);
   return d.toLocaleDateString("en-US", {
+    timeZone: "UTC",
     year: "numeric",
     month: "short",
     day: "numeric",
