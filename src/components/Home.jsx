@@ -47,6 +47,9 @@ export function Home() {
           }}
         >
           <button
+            type="button"
+            aria-pressed={active === null}
+            aria-label="Filter by all posts"
             onClick={() => setActive(null)}
             style={filterStyle(active === null)}
           >
@@ -54,7 +57,10 @@ export function Home() {
           </button>
           {allTags.map((t) => (
             <button
+              type="button"
+              aria-pressed={active === t}
               key={t}
+              aria-label={`Filter by ${t}`}
               onClick={() => setActive(t)}
               style={filterStyle(active === t)}
             >
