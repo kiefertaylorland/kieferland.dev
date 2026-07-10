@@ -60,8 +60,6 @@ export function Home() {
               type="button"
               aria-pressed={active === t}
               key={t}
-              type="button"
-              aria-pressed={active === t}
               aria-label={`Filter by ${t}`}
               onClick={() => setActive(t)}
               style={filterStyle(active === t)}

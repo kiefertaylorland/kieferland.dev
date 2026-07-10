@@ -22,7 +22,7 @@ export function WritingList({ posts }) {
       {rows.map((p, i) => (
         <div key={p.id} id={p.id}>
           <a
-            href={`/#${p.id}`}
+            href={p.href || `/#${p.id}`}
             style={{
               display: "flex",
               alignItems: "baseline",
