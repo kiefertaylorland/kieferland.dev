@@ -514,13 +514,6 @@ a {
   border-top: 1px solid var(--color-border);
 }
 
-/* Hero already draws a divider below it; avoid a second one right after */
-.hero + .metric-row {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-}
-
 .metric {
   display: flex;
   flex-direction: column;
@@ -557,10 +550,12 @@ a {
   color: var(--color-text-muted);
 }
 
-.home-stats {
+.metric-row.home-stats {
   justify-content: center;
   text-align: center;
-  padding-top: var(--space-16);
+  margin-top: var(--space-24);
+  padding-top: 0;
+  border-top: none;
 }
 
 .home-stats .metric {
