@@ -6,6 +6,7 @@
     </a>
     <nav class="site-nav">
       <a href="/" class="{{ if .IsHome }}active{{ end }}">Home</a>
+      <a href="/writing/" class="{{ if eq .Section "writing" }}active{{ end }}">Writings</a>
       <a href="/about/" class="{{ if eq .RelPermalink "/about/" }}active{{ end }}">About</a>
       <button id="theme-toggle" type="button" aria-label="Toggle theme" class="theme-toggle">
         <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
