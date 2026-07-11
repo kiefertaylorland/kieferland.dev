@@ -1,6 +1,6 @@
 ---
-title: "About — Kiefer Land"
-description: "AI Quality & Evals Engineer"
+title: "About"
+description: "Software Development Engineer in Test (SDET)"
 ---
 
 <div class="about-hero">
