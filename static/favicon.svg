@@ -1,13 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <!-- Hanko seal: outer circle with inner character-like mark -->
-  <circle cx="64" cy="64" r="56" stroke-width="6" />
-  <rect x="44" y="38" width="8" height="52" rx="2" />
-  <rect x="76" y="38" width="8" height="52" rx="2" />
-  <rect x="44" y="38" width="40" height="8" rx="2" />
-  <rect x="44" y="60" width="40" height="8" rx="2" />
-  <rect x="44" y="82" width="40" height="8" rx="2" />
-  <style>
-    circle { stroke: #c41e3a; fill: none; }
-    rect { fill: #c41e3a; }
-  </style>
+  <circle cx="64" cy="64" r="56" fill="none" stroke="#e6002d" stroke-width="8" />
+  <rect x="44" y="38" width="8" height="52" rx="2" fill="#e6002d" />
+  <rect x="76" y="38" width="8" height="52" rx="2" fill="#e6002d" />
+  <rect x="44" y="38" width="40" height="8" rx="2" fill="#e6002d" />
+  <rect x="44" y="60" width="40" height="8" rx="2" fill="#e6002d" />
+  <rect x="44" y="82" width="40" height="8" rx="2" fill="#e6002d" />
 </svg>
