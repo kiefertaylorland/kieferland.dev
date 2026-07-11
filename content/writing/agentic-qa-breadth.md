@@ -49,7 +49,7 @@ I also do this at my day job, on a larger production app, with a weekly mutation
 <div class="metric-row">
   <div class="metric"><span class="metric-value">12</span><span class="metric-label">Deferred TODOs closed in one release</span></div>
   <div class="metric metric-accent"><span class="metric-value">2</span><span class="metric-label">Languages, one mutation-testing discipline</span></div>
-  <div class="metric metric-pass"><span class="metric-value">6</span><span class="metric-label">Side projects shipped this year</span><span class="metric-sub">per my About page</span></div>
+  <div class="metric metric-pass"><span class="metric-value">6</span><span class="metric-label">Side projects shipped this year</span></div>
 </div>
 
-[← Back home](/)
+[← Back to writings](/writing/)
