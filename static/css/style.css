@@ -557,6 +557,16 @@ a {
   color: var(--color-text-muted);
 }
 
+.home-stats {
+  justify-content: center;
+  text-align: center;
+  padding-top: var(--space-16);
+}
+
+.home-stats .metric {
+  align-items: center;
+}
+
 /* About page */
 .prose-page {
   padding: var(--space-12) 0 var(--space-16);
@@ -604,11 +614,6 @@ a {
   background: var(--color-bg);
   color: var(--color-text);
   text-decoration: none;
-}
-
-.about-metrics {
-  margin-top: var(--space-12);
-  padding-bottom: var(--space-10);
 }
 
 .section-title {
