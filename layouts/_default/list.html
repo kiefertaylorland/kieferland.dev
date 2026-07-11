@@ -1,4 +1,54 @@
 {{ define "main" }}
+{{ if eq .Section "writing" }}
+{{ $posts := .Pages.ByDate.Reverse }}
+{{ $tags := slice }}
+{{ range $posts }}
+  {{ range .Params.tags }}
+    {{ if not (in $tags .) }}{{ $tags = $tags | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+<section class="hero about-hero">
+  <div class="about-hero-text">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="about-role">AI Quality Engineering</p>
+    <p class="hero-lede">{{ .Description }}</p>
+    <div class="about-links">
+        <a class="btn" href="https://github.com/kiefertaylorland">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/kieferland">LinkedIn</a>
+        <a class="btn" href="mailto:kiefertaylorland@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="stamp stamp-lg" aria-hidden="true">証<span class="stamp-label">verified</span></div>
+</section>
+
+<section class="writing-section">
+  <div class="tag-filter" role="group" aria-label="Filter posts by tag">
+    <button type="button" class="tag-btn active" data-tag="">all</button>
+    {{ range $tags }}
+    <button type="button" class="tag-btn" data-tag="{{ . }}">{{ . }}</button>
+    {{ end }}
+  </div>
+
+  <div class="writing-list">
+    {{ range $posts }}
+    <a href="{{ .RelPermalink }}" class="writing-row" data-tags="{{ delimit .Params.tags "," }}">
+      <span class="writing-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="writing-body">
+        <span class="writing-title">{{ .Title }}</span>
+        <span class="writing-excerpt">{{ .Description }}</span>
+      </span>
+      <span class="writing-read">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        {{ .ReadingTime }} min
+      </span>
+    </a>
+    {{ else }}
+    <p class="writing-empty">Nothing published yet — check back soon.</p>
+    {{ end }}
+  </div>
+</section>
+{{ else }}
 <section class="writing-section">
   <h1 class="page-title">{{ .Title }}</h1>
   <div class="writing-list">
@@ -14,4 +64,5 @@
     {{ end }}
   </div>
 </section>
+{{ end }}
 {{ end }}
