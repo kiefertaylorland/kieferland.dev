@@ -562,6 +562,11 @@ a {
   align-items: center;
 }
 
+/* Match the gap above the stats so hero → stats → callout reads as symmetric */
+.home-stats + .callout {
+  margin-top: var(--space-8);
+}
+
 /* About page */
 .prose-page {
   padding: var(--space-12) 0 var(--space-16);
