@@ -1,20 +1,20 @@
 ---
 title: "About"
-description: "Software Development Engineer in Test (SDET)"
+description: "AI Quality Engineering"
 ---
 
 <div class="about-hero">
   <div class="about-hero-text">
     <h1 class="page-title">Kiefer Land</h1>
-    <p class="about-role">AI Quality &amp; Evals Engineer</p>
-    <p class="about-lede">As agents write more of the code, the scarce resource becomes verified trust, and someone has to build the machinery that produces it.</p>
+    <p class="about-role">AI Quality Engineering</p>
+    <p class="about-lede">Notes on making AI-built software verifiable.</p>
     <div class="about-links">
       <a class="btn" href="https://github.com/kiefertaylorland">GitHub</a>
       <a class="btn" href="https://linkedin.com/in/kieferland">LinkedIn</a>
       <a class="btn" href="mailto:kiefertaylorland@gmail.com">Email</a>
     </div>
   </div>
-  <div class="stamp stamp-lg" aria-hidden="true">証<span class="stamp-label">verified</span></div>
+    <div class="stamp stamp-lg" aria-hidden="true">証<span class="stamp-label">verified</span></div>
 </div>
 
 <div class="metric-row about-metrics">
