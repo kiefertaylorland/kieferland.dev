@@ -1,0 +1,11 @@
+{{ define "main" }} {{ if eq .Section "writing" }}
+<article class="post">
+  <p class="post-meta">
+    {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min
+  </p>
+  <h1 class="page-title post-title">{{ .Title }}</h1>
+  <div class="post-body">{{ .Content }}</div>
+</article>
+{{ else }}
+<div class="prose-page">{{ .Content }}</div>
+{{ end }} {{ end }}
