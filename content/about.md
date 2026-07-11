@@ -7,7 +7,7 @@ description: "AI Quality Engineering"
   <div class="about-hero-text">
     <h1 class="page-title">Kiefer Land</h1>
     <p class="about-role">AI Quality Engineering</p>
-    <p class="about-lede">Notes on making AI-built software verifiable.</p>
+    <p class="about-lede">I'm Kiefer Land, a QA engineer who applies CI-gate discipline and mutation testing to make AI-generated code provably trustworthy.</p>
     <div class="about-links">
       <a class="btn" href="https://github.com/kiefertaylorland">GitHub</a>
       <a class="btn" href="https://linkedin.com/in/kieferland">LinkedIn</a>
@@ -15,12 +15,6 @@ description: "AI Quality Engineering"
     </div>
   </div>
     <div class="stamp stamp-lg" aria-hidden="true">証<span class="stamp-label">verified</span></div>
-</div>
-
-<div class="metric-row about-metrics">
-  <div class="metric"><span class="metric-value">3</span><span class="metric-label">Years in software testing &amp; QA</span></div>
-  <div class="metric metric-accent"><span class="metric-value">7</span><span class="metric-label">Security certifications</span></div>
-  <div class="metric metric-pass"><span class="metric-value">0</span><span class="metric-label">QA-attributed rollbacks</span></div>
 </div>
 
 <h2 class="section-title">Track record</h2>
