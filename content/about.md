@@ -40,8 +40,3 @@ description: "AI Quality Engineering"
     <p class="timeline-text">Started my journey at TCWGlobal in February as an IT Support Technician on the help desk. Some cool projects I worked on include: building an IT asset management system, performed device lifecycle management (DLM) for 150+ Lenovo ThinkPads and 25 MacBook Pros with NIST SP 800-88 compliant data disposal. Promoted to Junior System Administrator (Dec) — automated MacBook provisioning with Jamf (60% faster new-hire setup) and led security hardening across 250+ Windows/Linux systems, sustaining 99%+ uptime.</p>
   </div>
 </div>
-
-<div class="callout callout-pass">
-  <div class="callout-title">Working principle</div>
-  <div class="callout-body">Trust doesn't scale; evidence does. Every claim this site makes about my work is meant to be something you could, in principle, replay and check.</div>
-</div>
