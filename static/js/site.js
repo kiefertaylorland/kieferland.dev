@@ -1,15 +1,4 @@
 (function () {
-  var toggle = document.getElementById("theme-toggle");
-  if (toggle) {
-    toggle.addEventListener("click", function () {
-      var current =
-        document.documentElement.getAttribute("data-theme") || "light";
-      var next = current === "light" ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-    });
-  }
-
   var buttons = document.querySelectorAll(".tag-btn");
   var rows = document.querySelectorAll(".writing-row");
   buttons.forEach(function (btn) {

@@ -1,8 +1,9 @@
 {{ define "main" }} {{ if eq .Section "writing" }}
 <article class="post">
-  <p class="post-meta">
-    {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min
-  </p>
+  <div class="post-meta">
+    <span class="eyebrow">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min</span>
+    {{ if .Draft }}<span class="badge badge-draft">Draft</span>{{ end }}
+  </div>
   <h1 class="page-title post-title">{{ .Title }}</h1>
   <div class="post-body">{{ .Content }}</div>
 </article>
