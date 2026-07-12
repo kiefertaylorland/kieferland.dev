@@ -751,8 +751,7 @@ pre {
 
 /* Tables — flat printed grid: hairline borders, raised header, no shadows */
 .post-body table {
-  display: block;
-  overflow-x: auto;
+  width: 100%;
   border-collapse: collapse;
   margin-top: var(--space-6);
   font-size: var(--text-sm);
@@ -775,10 +774,17 @@ pre {
   font-weight: var(--weight-medium);
   color: var(--text-muted);
   background: var(--surface-raised);
-  white-space: nowrap;
 }
 
 .post-body td:first-child {
   font-weight: var(--weight-semibold);
-  white-space: nowrap;
+}
+
+/* On narrow screens a many-column table can't physically fit; scroll it
+   within itself so the page itself never scrolls sideways */
+@media (max-width: 720px) {
+  .post-body table {
+    display: block;
+    overflow-x: auto;
+  }
 }
