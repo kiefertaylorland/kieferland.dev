@@ -5,9 +5,9 @@ description: "AI Quality Engineering"
 
 <div class="about-hero">
   <div class="about-hero-text">
-    <h1 class="page-title">Kiefer Land</h1>
-    <p class="about-role">AI Quality Engineering</p>
-    <p class="about-lede">I'm Kiefer Land, a QA engineer who applies CI-gate discipline and mutation testing to make AI-generated code provably trustworthy.</p>
+    <h1 class="page-title">About</h1>
+    <p class="about-role">Quality Assurance Engineering</p>
+    <p class="about-lede">I'm Kiefer, a QA engineer writing about my experiences and insights in software testing, quality assurance, and life.</p>
     <div class="about-links">
       <a class="btn" href="https://github.com/kiefertaylorland">GitHub</a>
       <a class="btn" href="https://linkedin.com/in/kieferland">LinkedIn</a>

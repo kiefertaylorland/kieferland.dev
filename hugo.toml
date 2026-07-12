@@ -1,7 +1,7 @@
 baseURL = "https://kieferland.dev/"
 locale = "en-us"
 title = "Kiefer Land"
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term", "section"]
 
 [params]
   description = "Notes on making AI-built software verifiable"
