@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="hero">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Description }}<p class="hero-lede">{{ . }}</p>{{ end }}
+</section>
+
+<section class="writing-section">
+  <div class="writing-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="{{ .RelPermalink }}" class="writing-row">
+      <span class="writing-row-top">
+        <span class="writing-date eyebrow">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ if .Draft }}<span class="badge badge-draft" style="margin-left:auto">Draft</span>{{ end }}
+      </span>
+      <span class="writing-title">{{ .Title }}</span>
+      <span class="writing-excerpt">{{ .Description }}</span>
+      <span class="writing-read">{{ .ReadingTime }} min</span>
+    </a>
+    {{ else }}
+    <p class="writing-empty">Nothing published yet — check back soon.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

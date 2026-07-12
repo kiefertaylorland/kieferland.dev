@@ -1,0 +1,13 @@
+baseURL = "https://kieferland.dev/"
+locale = "en-us"
+title = "Kiefer Land"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Notes on making AI-built software verifiable"
+
+[permalinks]
+  writing = "/writing/:contentbasename/"
+
+[markup.goldmark.renderer]
+  unsafe = true
