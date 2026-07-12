@@ -748,3 +748,37 @@ pre {
     gap: var(--space-4);
   }
 }
+
+/* Tables — flat printed grid: hairline borders, raised header, no shadows */
+.post-body table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+}
+
+.post-body th,
+.post-body td {
+  border: var(--border-width) solid var(--border-default);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-body th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  font-weight: var(--weight-medium);
+  color: var(--text-muted);
+  background: var(--surface-raised);
+  white-space: nowrap;
+}
+
+.post-body td:first-child {
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+}

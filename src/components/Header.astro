@@ -1,0 +1,18 @@
+---
+const pathname = Astro.url.pathname;
+const isHome = pathname === '/';
+const isAbout = pathname === '/about/' || pathname === '/about';
+---
+
+<header class="site-header">
+	<div class="site-header-inner">
+		<a href="/" class="brand">
+			<span class="stamp" aria-hidden="true">検</span>
+			<span class="brand-name">Kiefer Land</span>
+		</a>
+		<nav class="site-nav">
+			<a href="/" class={isHome ? 'active' : ''}>Home</a>
+			<a href="/about/" class={isAbout ? 'active' : ''}>About</a>
+		</nav>
+	</div>
+</header>
