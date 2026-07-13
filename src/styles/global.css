@@ -766,10 +766,10 @@ pre {
   vertical-align: top;
 }
 
-.post-body th[style*="text-align: center"],
-.post-body td[style*="text-align: center"],
-.post-body th[style*="text-align:center"],
-.post-body td[style*="text-align:center"] {
+.post-body th[style="text-align: center"],
+.post-body td[style="text-align: center"],
+.post-body th[style="text-align:center"],
+.post-body td[style="text-align:center"] {
   text-align: center;
 }
 
