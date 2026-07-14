@@ -749,9 +749,19 @@ pre {
   }
 }
 
-/* Tables — flat printed grid: hairline borders, raised header, no shadows */
+/* Tables — flat printed grid: hairline borders, raised header, no shadows.
+   A table wider than the 720px column breaks out symmetrically: the block
+   shrink-wraps to its content (capped at the viewport minus gutters), is
+   re-centered on the column's center — which is the page's center — and
+   scrolls internally past the cap, so it never overflows to one side */
 .post-body table {
-  width: 100%;
+  display: block;
+  overflow-x: auto;
+  width: max-content;
+  min-width: 100%;
+  max-width: calc(100vw - 2 * var(--space-6));
+  margin-left: 50%;
+  transform: translateX(-50%);
   border-collapse: collapse;
   margin-top: var(--space-6);
   font-size: var(--text-sm);
@@ -780,11 +790,3 @@ pre {
   font-weight: var(--weight-semibold);
 }
 
-/* On narrow screens a many-column table can't physically fit; scroll it
-   within itself so the page itself never scrolls sideways */
-@media (max-width: 720px) {
-  .post-body table {
-    display: block;
-    overflow-x: auto;
-  }
-}
