@@ -1,0 +1,69 @@
+baseURL: https://kieferland.dev/
+title: Kiefer Land
+theme: PaperMod
+locale: en-US
+timeZone: America/Los_Angeles
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Keep the existing post URLs (/writing/<filename>/)
+permalinks:
+  writing: /writing/:contentbasename/
+
+# Keep the existing feed URL (/rss.xml instead of Hugo's default /index.xml)
+outputFormats:
+  rss:
+    mediaType: application/rss+xml
+    baseName: rss
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  description: Notes on making AI-built software verifiable
+  keywords: [qa, testing, ai, evals, verification]
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  mainSections:
+    - writing
+
+  homeInfoParams:
+    Title: Kiefer Land
+    Content: Notes on making AI-built software verifiable.
+
+  socialIcons:
+    - name: github
+      url: https://github.com/kiefertaylorland
+    - name: linkedin
+      url: https://linkedin.com/in/kieferland
+    - name: rss
+      url: /rss.xml
+
+menu:
+  main:
+    - identifier: writing
+      name: Writing
+      url: /writing/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false
