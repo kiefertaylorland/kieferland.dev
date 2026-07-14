@@ -33,7 +33,7 @@ A realignment on the QA team was the forcing function to double-down on Claude C
 
 Manual testing was immediately deprioritized, but not completely eliminated, and risk-based automation testing was immediately prioritized .
 
-Leveraging testing frameworks and best practices such as **The Test Pyramid**, **functional testing**, and **non-functional testing** a single workflow with five phases for testing a software products was developed:
+Leveraging testing frameworks and best practices such as **The Test Pyramid**, **functional testing**, and **non-functional testing**, I developed a single workflow with five phases for testing software products:
 
 - **Classify**: `High-Risk` or `Standard` , HR products are `High-Risk` by default
 - **Measure**: 20 test categories from tool output.
