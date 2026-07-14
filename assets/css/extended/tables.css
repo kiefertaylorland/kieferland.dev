@@ -1,0 +1,8 @@
+/* Keep content tables inside the 720px column; scroll horizontally when wider. */
+.md-content table {
+    display: block;
+    max-width: 100%;
+    width: fit-content;
+    overflow-x: auto;
+    margin-inline: auto;
+}
