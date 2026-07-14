@@ -1,6 +1,9 @@
-node_modules/
-dist/
-.astro/
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# Tooling
 .gstack/
 .claude/
 Plans/
