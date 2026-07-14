@@ -21,7 +21,7 @@ Until recently when Claude Code was rolled out to my company’s QA team, testin
 
 Regression testing was painful and slow taking days on end to complete with a team of 4 QA engineers.
 
-Automation was essentially non-existent and what did exist were a handful of unit tests at best and some crappy Playwright UI tests that were more theatre than anything else.
+Automation was essentially non-existent and what did exist were a handful of unit and UI tests that weren't running in CI/CD so they weren't providing any real value in catching regressions or ensuring quality.
 
 QA leadership and team misaligned and directionless.
 
@@ -29,11 +29,11 @@ Demos of Claude Code, AI workflows and automations falling on deaf ears.
 
 ## The Solution
 
-A recent realignment on the QA team was the forcing function to double-down on Claude Code, AI workflows and automations.
+A realignment on the QA team was the forcing function to double-down on Claude Code, AI workflows and automations.
 
 Manual testing was immediately deprioritized, but not completely eliminated, and risk-based automation testing was immediately prioritized .
 
-Leveraging testing frameworks and best practices such as the Test Pyramid, functional testing, and non-functional functional testing a single workflow with five phases for testing a software products was developed:
+Leveraging testing frameworks and best practices such as **The Test Pyramid**, **functional testing**, and **non-functional testing** a single workflow with five phases for testing a software products was developed:
 
 - **Classify**: `High-Risk` or `Standard` , HR products are `High-Risk` by default
 - **Measure**: 20 test categories from tool output.
@@ -41,7 +41,9 @@ Leveraging testing frameworks and best practices such as the Test Pyramid, funct
 - **Gate**: Test suites earn merge blocking status after an advisory period with the exception of the smoke test suite which always blocks from day 1.
 - **Govern**: Dual sign-off, escalation paths, and quarterly reviews.
 
-## Defaults for High-Risk Products
+## The Default Test Suites
+
+Every project includes the following default test suites:
 
 - **Unit**
 - **Security — access control**
