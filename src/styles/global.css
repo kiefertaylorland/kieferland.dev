@@ -549,6 +549,17 @@ pre {
   color: var(--vermillion);
 }
 
+/* End-of-post nav — centered so it reads deliberately even when the
+   article ends with a breakout table wider than the prose column */
+.post-footer-nav {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.post-footer-nav a {
+  color: var(--vermillion);
+}
+
 /* Callout — flat hairline-bordered panel */
 .callout {
   background: var(--surface-card);
