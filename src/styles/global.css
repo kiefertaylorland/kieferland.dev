@@ -753,13 +753,14 @@ pre {
    A table wider than the 720px column breaks out symmetrically: the block
    shrink-wraps to its content (capped at the viewport minus gutters), is
    re-centered on the column's center — which is the page's center — and
-   scrolls internally past the cap, so it never overflows to one side */
+   scrolls internally past the cap, so it never overflows to one side.
+   The cap matches the wide content column so tables never go full-bleed */
 .post-body table {
   display: block;
   overflow-x: auto;
   width: max-content;
   min-width: 100%;
-  max-width: calc(100vw - 2 * var(--space-6));
+  max-width: min(calc(100vw - 2 * var(--space-6)), var(--content-width-wide));
   margin-left: 50%;
   transform: translateX(-50%);
   border-collapse: collapse;
