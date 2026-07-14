@@ -41,7 +41,7 @@ Leveraging testing frameworks and best practices such as **The Test Pyramid**, *
 - **Gate**: Test suites earn merge blocking status after an advisory period with the exception of the smoke test suite which always blocks from day 1.
 - **Govern**: Dual sign-off, escalation paths, and quarterly reviews.
 
-## The Default Test Suites
+## The Defaults
 
 Every project includes the following default test suites:
 
@@ -50,7 +50,7 @@ Every project includes the following default test suites:
 - **UI Smoke/E2E**
 - **Regression**
 
-## Category Definitions
+## The Definitions
 
 |                  **Category**                   |                                                                                                                                     **Definition**                                                                                                                                      |                                                                                               **Coverage signal to report**                                                                                                |
 | :---------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
