@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "AI Quality Engineering"
+description: "Software Testing & Quality Assurance Engineering"
 ShowReadingTime: false
 ShowToc: false
 ---
