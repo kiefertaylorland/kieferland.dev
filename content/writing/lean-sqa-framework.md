@@ -1,7 +1,7 @@
 ---
 title: "Lean SQA in a Regulated Industry: Building a Testing Framework That Scales"
 date: 2026-07-11
-tags: ["qa", "testing", "frameworks", "compliance"]
+tags: ["QA", "testing", "frameworks", "compliance"]
 description: "Exploring how to implement lean software quality assurance practices in regulated industries, ensuring compliance while maintaining scalability."
 ---
 
