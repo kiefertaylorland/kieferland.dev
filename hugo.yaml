@@ -43,12 +43,12 @@ params:
     Content: Notes on software testing, application security, and life.
 
   socialIcons:
-    - name: github
-      url: https://github.com/kiefertaylorland
     - name: linkedin
       url: https://linkedin.com/in/kieferland
+    - name: github
+      url: https://github.com/kiefertaylorland    
     - name: reddit
-      url: sutherlandsec
+      url: https://reddit.com/user/sutherlandsec
 
 menu:
   main:
