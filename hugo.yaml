@@ -49,6 +49,8 @@ params:
       url: https://github.com/kiefertaylorland    
     - name: reddit
       url: https://reddit.com/user/sutherlandsec
+    - name: tryhackme
+      url: https://tryhackme.com/p/sutherland
 
 menu:
   main:
