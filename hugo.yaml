@@ -25,7 +25,7 @@ minify:
 
 params:
   env: production
-  description: Notes on making AI-built software verifiable
+  description: Notes on software testing, application security, and life.
   keywords: [qa, testing, ai, evals, verification]
   defaultTheme: auto
   ShowReadingTime: true
@@ -40,7 +40,7 @@ params:
 
   homeInfoParams:
     Title: Kiefer Land
-    Content: Notes on making AI-built software verifiable.
+    Content: Notes on software testing, application security, and life.
 
   socialIcons:
     - name: github
