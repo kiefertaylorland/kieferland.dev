@@ -7,42 +7,42 @@ description: "Exploring how to implement lean software quality assurance practic
 
 ## Background
 
-Over the last week I’ve been implementing a risk-based framework to assist with testing software products and document evidence for audits.
+Over the last week, I’ve been implementing a risk-based framework to assist with testing software products and documenting evidence for audits.
 
-The products I work on typically deal with PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance, Vendor Management Systems (VMSs), Managed Service Provides (MSPs), and all kinds of other fun stuff.
+The products I work on typically deal with PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance, Vendor Management Systems (VMSs), Managed Service Providers (MSPs), and all kinds of other fun stuff.
 
-Additionally, the products serve clients domestically in the US as well as globally in jurisdictions across the EU, UK, and Canada.
+Additionally, the products serve clients domestically in the US and globally in jurisdictions across the EU, the UK, and Canada.
 
 ## The Problem
 
-The friction I was initially facing was how can I realistically keep testing and QA on pace with the speed of the developers on my team in the age of agentic coding?
+The friction I was initially facing was how I could realistically keep testing and QA on pace with the speed of the developers on my team in the age of agentic coding.
 
-Until recently when Claude Code was rolled out to my company’s QA team, testing our products was done mostly manual.
+Until recently, when Claude Code was rolled out to my company’s QA team, testing our products was done mostly manually.
 
-Regression testing was painful and slow taking days on end to complete with a team of 4 QA engineers.
+Regression testing was painful and slow, taking days on end to complete with a team of 4 QA engineers.
 
-Automation was essentially non-existent and what did exist were a handful of unit and UI tests that weren't running in CI/CD so they weren't providing any real value in catching regressions or ensuring quality.
+Automation was essentially non-existent, and what did exist were a handful of unit and UI tests that weren’t running in CI/CD, so they weren’t providing any real value in catching regressions or ensuring quality.
 
 ## The Solution
 
-Manual testing was immediately deprioritized, but not completely eliminated, and risk-based automation testing was immediately prioritized .
+Manual testing was immediately deprioritized, but not completely eliminated, and risk-based automation testing was immediately prioritized.
 
-Leveraging testing frameworks and best practices such as **The Test Pyramid**, **functional testing**, and **non-functional testing**, I developed a single workflow with five phases for testing software products:
+Leveraging testing frameworks and best practices such as The Test Pyramid, functional testing, and non-functional testing, I developed a single workflow with five phases for testing software products:
 
-- **Classify**: `High-Risk` or `Standard` , HR products are `High-Risk` by default
-- **Measure**: 20 test categories from tool output.
-- **Score**: Invest / Keep / Hold / Drop
-- **Gate**: Test suites earn merge blocking status after an advisory period with the exception of the smoke test suite which always blocks from day 1.
-- **Govern**: Dual sign-off, escalation paths, and quarterly reviews.
+- Classify: High-Risk or Standard. HR products are High-Risk by default.
+- Measure: 20 test categories from the tool output.
+- Score: Invest / Keep / Hold / Drop
+- Gate: Test suites earn merge-blocking status after an advisory period. The smoke test suite blocks from day 1.
+- Govern: Dual sign-off, escalation paths, and quarterly reviews.
 
 ## The Defaults
 
 Every project includes the following default test suites:
 
-- **Unit**
-- **Security — role-based access control (RBAC)**
-- **UI Smoke/E2E**
-- **Regression**
+- Unit
+- Security - Role-based access control (RBAC)
+- UI - Smoke & E2E
+- Regression
 
 ## The Definitions
 
