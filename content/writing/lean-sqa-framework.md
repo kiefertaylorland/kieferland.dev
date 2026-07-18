@@ -9,9 +9,9 @@ description: "Exploring how to implement lean software quality assurance practic
 
 Over the last week I’ve been implementing a risk-based framework to assist with testing software products and document evidence for audits.
 
-The products I work on typically deal with PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance, VMS, MSP, and all kinds of fun stuff.
+The products I work on typically deal with PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance, Vendor Management Systems (VMSs), Managed Service Provides (MSPs), and all kinds of other fun stuff.
 
-Additionally, the products serve clients domestically in the US as well as globally in jurisdictions such as the EU, UK, and Canada.
+Additionally, the products serve clients domestically in the US as well as globally in jurisdictions across the EU, UK, and Canada.
 
 ## The Problem
 
@@ -23,13 +23,7 @@ Regression testing was painful and slow taking days on end to complete with a te
 
 Automation was essentially non-existent and what did exist were a handful of unit and UI tests that weren't running in CI/CD so they weren't providing any real value in catching regressions or ensuring quality.
 
-QA leadership and team misaligned and directionless.
-
-Demos of Claude Code, AI workflows and automations falling on deaf ears.
-
 ## The Solution
-
-A realignment on the QA team was the forcing function to double-down on Claude Code, AI workflows and automations.
 
 Manual testing was immediately deprioritized, but not completely eliminated, and risk-based automation testing was immediately prioritized .
 
@@ -46,7 +40,7 @@ Leveraging testing frameworks and best practices such as **The Test Pyramid**, *
 Every project includes the following default test suites:
 
 - **Unit**
-- **Security — access control**
+- **Security — role-based access control (RBAC)**
 - **UI Smoke/E2E**
 - **Regression**
 
