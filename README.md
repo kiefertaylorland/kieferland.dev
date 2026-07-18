@@ -26,5 +26,3 @@ git clone --recurse-submodules https://github.com/kiefertaylorland/kieferland.de
 hugo server    # local dev server at localhost:1313
 hugo --minify  # static build to public/
 ```
-
-To update the theme: `git submodule update --remote themes/PaperMod`.
