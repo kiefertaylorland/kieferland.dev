@@ -47,8 +47,8 @@ params:
       url: https://github.com/kiefertaylorland
     - name: linkedin
       url: https://linkedin.com/in/kieferland
-    - name: rss
-      url: /rss.xml
+    - name: reddit
+      url: sutherlandsec
 
 menu:
   main:
