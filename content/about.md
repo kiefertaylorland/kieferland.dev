@@ -7,7 +7,7 @@ ShowToc: false
 
 I'm Kiefer, a Quality Assurance Engineer and security subject-matter expert writing about my experiences and insights in software testing, application security, and life.
 
-[GitHub](https://github.com/kiefertaylorland) · [LinkedIn](https://linkedin.com/in/kieferland) · [Email](mailto:kiefertaylorland@gmail.com)
+[LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [Reddit](https://reddit.com/user/sutherlandsec) | [Email](mailto:kiefertaylorland@gmail.com)
 
 ## Core Competencies
 
