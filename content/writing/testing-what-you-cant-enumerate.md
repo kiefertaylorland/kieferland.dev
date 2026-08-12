@@ -11,13 +11,7 @@ Last month I wrote about the [risk-based testing framework](/writing/lean-sqa-fr
 
 Then the products started shipping AI features.
 
-The same products as before — PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance. Now with an LLM somewhere in the decision path.
-
-The framework didn't cover it. Not because it was wrong, but because every coverage signal in it assumes you can count the thing you're covering.
-
-A note on scope before the rest of it. This policy covers the US, the UK, and Canada. The EU AI Act and the APAC frameworks are deliberately out of scope, because we don't operate as a direct employer in those jurisdictions today.
-
-That exclusion is the point. Scope to where you actually have exposure, then write down why you excluded the rest and who owns revisiting it. An unwritten exclusion isn't a scope decision, it's a gap nobody has noticed yet.
+The same products as before — PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance.
 
 ## The Problem
 
@@ -32,8 +26,6 @@ The original framework breaks in four places.
 **The failure modes have no home.** There is no row in a twenty-category table for "the model was talked out of its instructions," or "the agent sent an email nobody approved," or "it passed on launch day and drifted by day two hundred."
 
 So the coverage signal has to change in kind. Not *how much did we cover* — you can't know. What you can know is *which named failure classes have a test, and did it hold.*
-
-That's the whole shift. Every table below is built on it.
 
 ## The Solution
 
@@ -160,19 +152,3 @@ This is a first pass at a policy that is still pending sign-off, and the table s
 Six Invest rows. Three of them are the unconditional blockers, and the fourth blocking category — upload quarantine — is a Drop only because there's no ingestion path to attack yet. That ordering isn't a coincidence. The rows that block release are the rows that get built first, and everything else waits for a trigger.
 
 The isolation row is the one that matters most and reads worst: capabilities enumerated in prose, zero of them asserted in code. Prose is not a test. Until those assertions exist, what we have is a description of what the agent is supposed to reach, which is exactly the intent-based assurance this policy exists to replace.
-
-## A Note on the Standards
-
-Cite these carefully. The ground is moving.
-
-The [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) 2025 revision consolidated several 2023 items — insecure output handling and plugin design folded into broader categories — so numbering that looks stable in one blog post won't match another. Cite by concept, re-verify the number.
-
-Canada's AIDA is *proposed* federal legislation, not enacted. PIPEDA is what binds today. Treating AIDA as a current requirement is a common and confident error.
-
-The Colorado AI Act's effective date and scope are worth re-confirming every quarter, because compliance-deadline legislation gets delayed and amended more often than it gets enforced on schedule.
-
-[NYC Local Law 144](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page) applies to automated employment decision tools used on NYC-covered employers or candidates, and requires an independent bias audit within the preceding 12 months. Confirm applicability per product before treating it as binding.
-
-The UK's ICO AI guidance and DSIT principles are guidance, not a single binding AI statute. Best-practice benchmarks, not compliance requirements.
-
-Being precise about what *isn't* binding yet is worth as much as knowing what is. It's the difference between a policy an auditor trusts and one they start double-checking.
