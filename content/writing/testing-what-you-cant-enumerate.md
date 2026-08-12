@@ -11,7 +11,7 @@ Last month I wrote about the [risk-based testing framework](/writing/lean-sqa-fr
 
 Then the products started shipping AI features.
 
-The same products as before — PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance.
+The same products as before — PII and other regulated, person-level business data.
 
 ## The Problem
 
@@ -127,27 +127,27 @@ That's the concession the domain forces. You can't say how much of the input spa
 
 ## The Example
 
-A read-only query agent over sensitive workforce data. Authenticated internal and client-admin users only. No write access.
+A read-only query agent over sensitive people-related records. Authenticated organizational users only. No write access.
 
 Scored: **low** on action reversibility, **low** on external visibility, **high** on data access scope. One high axis, so the full adversarial and audit requirements apply to an agent that can't do anything but answer questions.
 
-This is a first pass at a policy that is still pending sign-off, and the table shows it. Most rows have no tooling yet.
+This is an anonymized, illustrative snapshot of an early-stage policy implementation, and the table shows it. Most rows have no tooling yet.
 
 | **Category** | **Tooling & pipeline ref** | **Coverage signal** | **CI gate** | **Priority** | **Owner** | **Revisit trigger** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Bias & Fairness** | None — agent ranks nothing and scores nobody | N/A at current scope | None | Drop | QA Lead | Any ranking, scoring, or filtering of people enters the feature |
-| **Prompt Injection** | Manual probe set, 3 attack classes, not yet codified | 3 classes attempted / 3 defended; no indirect-path coverage | None — **intended blocking from day one** | Invest | QA Lead | — |
-| **Sensitive Information Disclosure** | Manual probe set; indirect/reformatted query patterns identified, not automated | Direct probes run; indirect classes named but not executed. Leaks: 0 to date | None — **intended blocking from day one** | Invest | QA Lead | — |
-| **Agent Isolation & Least Privilege** | Access enumerated in the requirements doc; no programmatic assertions | 0% of enumerated capabilities programmatically asserted | None — **intended blocking from day one** | Invest — highest priority row in this table | QA Lead | — |
-| **Excessive Agency** | None — no write path exists to test | N/A while read-only | None | Hold | QA Lead | First write capability, tool call with side effects, or outbound action |
-| **Upload & Ingestion Quarantine** | None — no upload or ingestion path | N/A | None | Drop | QA Lead | First document upload or RAG corpus |
-| **Cross-Agent Leakage** | None — single agent, no shared agent infrastructure | N/A | None | Drop | QA Lead | Second agent deployed on shared infrastructure |
-| **AI Supply Chain** | Model provider pinned by version; no dependency scan on agent-invoked tools | Pinned: Y · Approved registry: Y · Scanned: N | None | Hold | QA Lead | Scan wiring — bundle with the existing dependency scanning work |
-| **Human Oversight & Contestability** | None — no adverse decisions in scope, agent informs nothing binding | 0 checkpoints identified | None | Hold | QA Lead | Output begins to materially inform a decision about a person |
-| **Model & Prompt Change Regression** | Ad hoc — changes re-tested by judgment, no defined suite | Change events: not tracked | None | Invest | QA Lead | — |
-| **Reproducibility & Audit Record** | Prompt versions in git; model version and dataset ref not captured per run | ~0% of runs with a complete audit record | None | Invest | QA Lead | — |
-| **Drift Monitoring** | None | No signal named | None | Hold | QA Lead | First production traffic at sustained volume |
-| **Test-Data Privacy & DPIA** | Synthetic fixtures only; DPIA trigger not yet evaluated | Provenance: synthetic (Y) · DPIA evaluation recorded: N | None | Invest — DPIA evaluation is a one-sitting task | QA Lead | — |
+| **Bias & Fairness** | None — agent ranks nothing and scores nobody | N/A at current scope | None | Drop | QA Owner | Any ranking, scoring, or filtering of people enters the feature |
+| **Prompt Injection** | Manual probe set, 3 attack classes, not yet codified | 3 classes attempted / 3 defended; no indirect-path coverage | None — **intended blocking from day one** | Invest | QA Owner | — |
+| **Sensitive Information Disclosure** | Manual probe set; indirect/reformatted query patterns identified, not automated | Direct probes run; indirect classes named but not executed. Leaks: 0 to date | None — **intended blocking from day one** | Invest | QA Owner | — |
+| **Agent Isolation & Least Privilege** | Access enumerated in the requirements doc; no programmatic assertions | 0% of enumerated capabilities programmatically asserted | None — **intended blocking from day one** | Invest — highest priority row in this table | QA Owner | — |
+| **Excessive Agency** | None — no write path exists to test | N/A while read-only | None | Hold | QA Owner | First write capability, tool call with side effects, or outbound action |
+| **Upload & Ingestion Quarantine** | None — no upload or ingestion path | N/A | None | Drop | QA Owner | First document upload or RAG corpus |
+| **Cross-Agent Leakage** | None — single agent, no shared agent infrastructure | N/A | None | Drop | QA Owner | Second agent deployed on shared infrastructure |
+| **AI Supply Chain** | Model provider pinned by version; no dependency scan on agent-invoked tools | Pinned: Y · Approved registry: Y · Scanned: N | None | Hold | QA Owner | Scan wiring — bundle with the existing dependency scanning work |
+| **Human Oversight & Contestability** | None — no adverse decisions in scope, agent informs nothing binding | 0 checkpoints identified | None | Hold | QA Owner | Output begins to materially inform a decision about a person |
+| **Model & Prompt Change Regression** | Ad hoc — changes re-tested by judgment, no defined suite | Change events: not tracked | None | Invest | QA Owner | — |
+| **Reproducibility & Audit Record** | Prompt versions in git; model version and dataset ref not captured per run | ~0% of runs with a complete audit record | None | Invest | QA Owner | — |
+| **Drift Monitoring** | None | No signal named | None | Hold | QA Owner | First production traffic at sustained volume |
+| **Test-Data Privacy & DPIA** | Synthetic fixtures only; DPIA trigger not yet evaluated | Provenance: synthetic (Y) · DPIA evaluation recorded: N | None | Invest — DPIA evaluation is a one-sitting task | QA Owner | — |
 
 Six Invest rows. Three of them are the unconditional blockers, and the fourth blocking category — upload quarantine — is a Drop only because there's no ingestion path to attack yet. That ordering isn't a coincidence. The rows that block release are the rows that get built first, and everything else waits for a trigger.
 
