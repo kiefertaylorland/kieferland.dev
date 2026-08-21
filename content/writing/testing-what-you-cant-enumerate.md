@@ -11,7 +11,7 @@ Last month I wrote about the [risk-based testing framework](/writing/lean-sqa-fr
 
 Then the products started shipping AI features.
 
-Same products as before, handling PII and other regulated, person-level business data.
+They were the same products as before, handling PII and other regulated, person-level business data.
 
 ## The Problem
 
