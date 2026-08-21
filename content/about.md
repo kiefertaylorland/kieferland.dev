@@ -33,7 +33,7 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 
 ### Software Quality Assurance Engineer I
 
-#### TCWGlobal (Cloud Motion Technologies) — HR Tech & Payroll EOR SaaS — Dec 2024 to Present
+#### Regulated HR Tech & Payroll Platform — Dec 2024 to Present
 
 - Sole QA engineer; own quality strategy, test infrastructure, and AI testing policy across six product teams.
 - Authored the company's adopted QA & Testing Framework — a risk-based standard that classifies each product and measures 20 test categories from real tool output.
@@ -48,7 +48,7 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 
 ### Software Quality Assurance Analyst
 
-#### TCWGlobal — Oct 2023 to Dec 2024
+#### Workforce Software Organization — Oct 2023 to Dec 2024
 
 - Built an API smoke and role-based access control (RBAC) suite covering critical workflows with custom JavaScript assertions.
 - Authored functional and non-functional tests for payroll, worker management, and minimum-wage compliance; verified data consistency across single sign-on (SSO), payrolling, and timekeeping integrations.
@@ -56,7 +56,7 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 
 ### Junior System Administrator
 
-#### TCWGlobal — Feb 2022 to Oct 2023
+#### Internal IT Operations — Feb 2022 to Oct 2023
 
 - Automated Apple device lifecycle management with Jamf.
 - Built an IT asset-management system for SOC 2 Type 2 readiness.
@@ -64,7 +64,7 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 
 ### IT Support Technician
 
-#### Foresight Sports — Jun 2021 to Feb 2022
+#### Sports Technology Support — Jun 2021 to Feb 2022
 
 - Hardware testing and cross-platform support.
 
