@@ -5,9 +5,13 @@ ShowReadingTime: false
 ShowToc: false
 ---
 
-I'm Kiefer, a Quality Assurance Engineer who owns quality end to end as the sole QA engineer for a regulated HR-tech and payroll EOR platform. I authored my organization's adopted risk-based QA framework, gate policy, and flaky-test policy, now applied across six product teams. I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than merely observed. I write here about software testing, application security, and life.
+I'm Kiefer, a Quality Assurance Engineer who owns quality end to end as the sole QA engineer for a regulated HR-tech and payroll EOR platform. 
 
-San Diego, California — open to remote or relocation.
+I authored my organization's risk-based QA and testing framework, AI & LLM testing and evaluation, gate policy, and flaky-test policy, now applied across three products.
+
+I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than merely observed. 
+
+I write here about software testing, quality assurance, application security, AI/LLMs, and life. Currently residing in San Diego, California.
 
 [LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [Reddit](https://reddit.com/user/sutherlandsec) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
 
