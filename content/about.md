@@ -13,7 +13,7 @@ I'm strongest at deciding what is worth testing under real capacity constraints,
 
 I write here about software testing, quality assurance, application security, AI/LLMs, and life. Currently residing in San Diego, California.
 
-[LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [Reddit](https://reddit.com/user/sutherlandsec) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
+[LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
 
 ## Core Competencies
 
