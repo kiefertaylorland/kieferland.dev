@@ -2,7 +2,7 @@
 title: "Shift Left, For Real: Testing and Security Belong in the Spec"
 date: 2026-08-20
 tags: ["QA", "testing", "security", "AI", "shift-left"]
-description: "The test and security plan belongs in the spec, not the PR. What changed when I moved it there, and what a review caught when the rules landed in a repo."
+description: "The test and security plan belongs in the spec, not the PR. What changed when I moved it there."
 ---
 
 ## Background
