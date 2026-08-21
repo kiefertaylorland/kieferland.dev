@@ -7,7 +7,7 @@ description: "The test and security plan belongs in the spec, not the PR. What c
 
 ## Background
 
-The [risk-based framework](/writing/lean-sqa-framework/) I built scores and gates test suites. The [AI extension](/writing/testing-what-you-cant-enumerate/) does the same for agents and LLM features. Both answer *how much testing, and where does it block a merge.*
+The [risk-based framework](/writing/lean-sqa-framework/) I built scores and gates test suites. The [AI extension](/writing/testing-what-you-cant-enumerate/) does the same for agents and LLM features. Both answer *how much testing, and where it blocks a merge.*
 
 Neither answers *when.*
 
