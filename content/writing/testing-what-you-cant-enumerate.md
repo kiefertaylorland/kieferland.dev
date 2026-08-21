@@ -11,7 +11,7 @@ Last month I wrote about the [risk-based testing framework](/writing/lean-sqa-fr
 
 Then the products started shipping AI features.
 
-The same products as before — PII and other regulated, person-level business data.
+Same products as before, handling PII and other regulated, person-level business data.
 
 ## The Problem
 
@@ -23,13 +23,13 @@ The original framework breaks in four places.
 
 **The same input doesn't produce the same output.** Regression testing assumes determinism. Run the suite twice, get two different answers, and "did this regress" stops being a yes/no question.
 
-**The failure modes have no home.** There is no row in a twenty-category table for "the model was talked out of its instructions," or "the agent sent an email nobody approved," or "it passed on launch day and drifted by day two hundred."
+**The failure modes have no home.** No row in a twenty-category table covers "the model was talked out of its instructions," or "the agent sent an email nobody approved," or "it passed on launch day and drifted by day two hundred."
 
-So the coverage signal has to change in kind. Not *how much did we cover* — you can't know. What you can know is *which named failure classes have a test, and did it hold.*
+So the coverage signal changes in kind. A percentage needs a denominator and there isn't one, so what these categories report instead is which named failure classes have a test, and whether the test held.
 
 ## The Solution
 
-AI and agent features are High-Risk by default. This layers on top of the existing twenty categories, it doesn't replace them — an AI feature gets the standard rubric *and* everything here.
+AI and agent features are High-Risk by default. This layers on top of the existing twenty categories rather than replacing them: an AI feature gets the standard rubric and everything here.
 
 [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) is the organizing standard. The OWASP LLM Top 10, ISO/IEC 42001 and 23894, and SOC 2 get layered in as "this control also satisfies X" rather than tracked as four parallel programs. One control, multiple credit. You implement once and claim it four times, which is the only way a small QA team gets through a compliance surface this wide.
 
@@ -43,7 +43,7 @@ The same five phases, adapted:
 
 ### Classify
 
-Not fixed tiers. Score each agent low/medium/high on three axes, and the highest score on any one axis sets the floor.
+There are no fixed tiers. Score each agent low, medium, or high on three axes, and the highest score on any one axis sets the floor.
 
 | **Axis** | **Low** | **Medium** | **High** |
 | :--- | :--- | :--- | :--- |
@@ -53,23 +53,21 @@ Not fixed tiers. Score each agent low/medium/high on three axes, and the highest
 
 Any medium brings in the full adversarial suite and audit-trail requirements at full strength. Any high brings in mandatory human oversight and the fastest escalation path, regardless of how the other two score.
 
-The consequence worth stating plainly: **a read-only agent can still be high-risk.** An agent that only answers questions, but answers them over PII with cross-tenant reach, scores high on data access alone. That pulls in the full adversarial and audit requirements even though it can't do anything. "It just reads" is not a scoping argument.
+A read-only agent can still be high-risk. An agent that only answers questions, but answers them over PII with cross-tenant reach, scores high on data access alone. That pulls in the full adversarial and audit requirements even though it can't do anything. "It just reads" is not a scoping argument.
 
 All-low agents can scope down human-oversight checkpoints and rollback drills. Record that decision and its owner. Don't silently skip it.
 
 ### Gate
 
-One exception to the Advisory-then-Required lifecycle.
-
-Critical or High findings on prompt injection, sensitive information disclosure, agent isolation, or upload quarantine block production release unconditionally. Not after a trial period. Not advisory first. From day one.
+One exception to the Advisory-then-Required lifecycle. Critical or High findings on prompt injection, sensitive information disclosure, agent isolation, or upload quarantine block production release from day one, with no advisory period and no trial run.
 
 That's the single non-negotiable in this policy. Everything else earns its blocking status the normal way.
 
 ### Govern
 
-Model and prompt changes get the same treatment as code. Any change to a model version, system prompt, guardrail config, fine-tuning data, or retrieval corpus re-runs the bias dataset, the adversarial suite, and the affected E2E specs. A change that materially moves behavior — refusal rate, tone, benchmark accuracy past a named threshold — goes through full entry and exit criteria, not an abbreviated path.
+Model and prompt changes get the same treatment as code. Any change to a model version, system prompt, guardrail config, fine-tuning data, or retrieval corpus re-runs the bias dataset, the adversarial suite, and the affected E2E specs. A change that materially moves behavior (refusal rate, tone, benchmark accuracy past a named threshold) goes through full entry and exit criteria, not an abbreviated path.
 
-Rollback is documented and *tested* before first release, with a stated time budget. An untested rollback is a hope.
+Rollback is documented and tested before first release, with a stated time budget. An untested rollback is a hope.
 
 Incidents aren't closed until the failure mode is added to the adversarial suite. A jailbreak that worked in production is a test case you were missing.
 
@@ -80,7 +78,7 @@ The policy itself gets a changelog, because the law underneath it moves faster t
 Every AI feature includes:
 
 - Bias test dataset, protected attributes, synthetic or de-identified
-- Adversarial suite — injection, disclosure, excessive agency
+- Adversarial suite: injection, disclosure, excessive agency
 - Audit record per test run, with model and prompt version pinned
 - Human-oversight checkpoint before any adverse or irreversible action
 - One named drift signal, with a stated cadence
@@ -92,22 +90,24 @@ Every AI feature includes:
 | **Bias & Fairness** | Disparate impact on outcomes about a person: hiring, pay, benefits eligibility, performance, disciplinary flags | Selection-rate ratio against the four-fifths (80%) rule, per protected attribute; protected-attribute coverage of the test set |
 | **Prompt Injection** | Instruction override via direct user input or indirectly via retrieved, uploaded, or ingested content | Named attack classes attempted vs. defended: instruction override, role-play jailbreak, injected content in RAG and upload paths |
 | **Sensitive Information Disclosure** | Whether the model can be induced to reveal data outside the requester's authorized scope, including via indirect or reformatted queries | Disclosure probe classes run, direct and indirect; leak count, which must be 0 |
-| **Agent Isolation & Least Privilege** | The agent's tool access, data access, and outbound capability, enumerated and verified — not asserted | % of enumerated capabilities with a **programmatic** assertion. Testing the agent's stated intent doesn't count |
-| **Excessive Agency** | Whether the agent can take an action — write, send, purchase, delete — outside its explicitly enumerated whitelist | Out-of-scope action attempts blocked / attempted |
+| **Agent Isolation & Least Privilege** | The agent's tool access, data access, and outbound capability, enumerated and verified rather than asserted | % of enumerated capabilities with a programmatic assertion. Testing the agent's stated intent doesn't count |
+| **Excessive Agency** | Whether the agent can take an action (write, send, purchase, delete) outside its explicitly enumerated whitelist | Out-of-scope action attempts blocked / attempted |
 | **Upload & Ingestion Quarantine** | Untrusted content isolated and scanned before it can influence agent behavior or reach other tools | Quarantine verified Y/N, per ingestion path |
 | **Cross-Agent Leakage** | Whether one agent's data or tool access can be reached or inferred by another agent sharing infrastructure | Agent pairs tested / agent pairs sharing infrastructure |
 | **AI Supply Chain** | Integrity of third-party models, plugins, and MCP-style tools the agent depends on | Per sub-scope: pinned Y/N, approved registry Y/N, scanned Y/N |
 | **Human Oversight & Contestability** | Human checkpoint before adverse or irreversible outcomes, plus a documented path for an affected person to contest one | Checkpoints identified vs. covered by an E2E spec; contestability path tested Y/N |
 | **Model & Prompt Change Regression** | Re-run of bias, adversarial, and affected E2E suites on any model, prompt, guardrail, or corpus change | Change events vs. change events that triggered the suite |
 | **Reproducibility & Audit Record** | Every run captures model/prompt version, dataset reference, timestamp, identity, and result; the run can be re-executed within a stated tolerance | % of runs with a complete audit record; reproducibility spot-check result |
-| **Drift Monitoring** | Post-deployment signal — output distribution shift, refusal-rate change, accuracy on a held-out set — checked on a stated cadence | Signal named Y/N, cadence, last check. "No monitoring" is a valid Drop, but it has to be a named one |
+| **Drift Monitoring** | Post-deployment signal (output distribution shift, refusal-rate change, accuracy on a held-out set) checked on a stated cadence | Signal named Y/N, cadence, last check. "No monitoring" is a valid Drop, but it has to be a named one |
 | **Test-Data Privacy & DPIA** | Synthetic or de-identified data by default in test environments; DPIA trigger evaluated and the outcome recorded | Test-data provenance (synthetic / de-identified / exception-approved); DPIA evaluation recorded Y/N |
 
-Note what the right-hand column stopped doing. Only two rows report a coverage percentage, and both count artifacts — enumerated capabilities, test runs — rather than inputs. The one other percentage in the table is the 80% bias threshold, which is a pass mark, not a measure of how much got covered. Everything else reports named classes, ratios, and Y/N per path.
+Note what the right-hand column stopped doing. Only two rows report a coverage percentage, and both count artifacts (enumerated capabilities, test runs) rather than inputs. The one other percentage in the table is the 80% bias threshold, which is a pass mark, not a measure of how much got covered. Everything else reports named classes, ratios, and Y/N per path.
 
 That's the concession the domain forces. You can't say how much of the input space you covered, so you say exactly which failures you went looking for.
 
 ## The Framework
+
+The blank template. One row per category, filled in per feature.
 
 | **Category** | **Tooling & pipeline ref** | **Coverage signal** | **CI gate** | **Priority** | **Owner** | **Revisit trigger** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -129,16 +129,16 @@ That's the concession the domain forces. You can't say how much of the input spa
 
 A read-only query agent over sensitive people-related records. Authenticated organizational users only. No write access.
 
-Scored: **low** on action reversibility, **low** on external visibility, **high** on data access scope. One high axis, so the full adversarial and audit requirements apply to an agent that can't do anything but answer questions.
+It scores low on action reversibility, low on external visibility, and high on data access scope. One high axis, so the full adversarial and audit requirements apply to an agent that can't do anything but answer questions.
 
 This is an anonymized, illustrative snapshot of an early-stage policy implementation, and the table shows it. Most rows have no tooling yet.
 
 | **Category** | **Tooling & pipeline ref** | **Coverage signal** | **CI gate** | **Priority** | **Owner** | **Revisit trigger** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Bias & Fairness** | None — agent ranks nothing and scores nobody | N/A at current scope | None | Drop | QA Owner | Any ranking, scoring, or filtering of people enters the feature |
-| **Prompt Injection** | Manual probe set, 3 attack classes, not yet codified | 3 classes attempted / 3 defended; no indirect-path coverage | None — **intended blocking from day one** | Invest | QA Owner | — |
-| **Sensitive Information Disclosure** | Manual probe set; indirect/reformatted query patterns identified, not automated | Direct probes run; indirect classes named but not executed. Leaks: 0 to date | None — **intended blocking from day one** | Invest | QA Owner | — |
-| **Agent Isolation & Least Privilege** | Access enumerated in the requirements doc; no programmatic assertions | 0% of enumerated capabilities programmatically asserted | None — **intended blocking from day one** | Invest — highest priority row in this table | QA Owner | — |
+| **Prompt Injection** | Manual probe set, 3 attack classes, not yet codified | 3 classes attempted / 3 defended; no indirect-path coverage | None — intended blocking from day one | Invest | QA Owner | — |
+| **Sensitive Information Disclosure** | Manual probe set; indirect/reformatted query patterns identified, not automated | Direct probes run; indirect classes named but not executed. Leaks: 0 to date | None — intended blocking from day one | Invest | QA Owner | — |
+| **Agent Isolation & Least Privilege** | Access enumerated in the requirements doc; no programmatic assertions | 0% of enumerated capabilities programmatically asserted | None — intended blocking from day one | Invest — highest priority row in this table | QA Owner | — |
 | **Excessive Agency** | None — no write path exists to test | N/A while read-only | None | Hold | QA Owner | First write capability, tool call with side effects, or outbound action |
 | **Upload & Ingestion Quarantine** | None — no upload or ingestion path | N/A | None | Drop | QA Owner | First document upload or RAG corpus |
 | **Cross-Agent Leakage** | None — single agent, no shared agent infrastructure | N/A | None | Drop | QA Owner | Second agent deployed on shared infrastructure |
@@ -149,6 +149,6 @@ This is an anonymized, illustrative snapshot of an early-stage policy implementa
 | **Drift Monitoring** | None | No signal named | None | Hold | QA Owner | First production traffic at sustained volume |
 | **Test-Data Privacy & DPIA** | Synthetic fixtures only; DPIA trigger not yet evaluated | Provenance: synthetic (Y) · DPIA evaluation recorded: N | None | Invest — DPIA evaluation is a one-sitting task | QA Owner | — |
 
-Six Invest rows. Three of them are the unconditional blockers, and the fourth blocking category — upload quarantine — is a Drop only because there's no ingestion path to attack yet. That ordering isn't a coincidence. The rows that block release are the rows that get built first, and everything else waits for a trigger.
+Six Invest rows. Three of them are the unconditional blockers, and the fourth blocking category, upload quarantine, is a Drop only because there's no ingestion path to attack yet. That ordering isn't a coincidence. The rows that block release are the rows that get built first, and everything else waits for a trigger.
 
 The isolation row is the one that matters most and reads worst: capabilities enumerated in prose, zero of them asserted in code. Prose is not a test. Until those assertions exist, what we have is a description of what the agent is supposed to reach, which is exactly the intent-based assurance this policy exists to replace.
