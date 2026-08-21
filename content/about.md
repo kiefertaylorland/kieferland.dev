@@ -5,7 +5,9 @@ ShowReadingTime: false
 ShowToc: false
 ---
 
-I'm Kiefer, a Quality Assurance Engineer and security subject-matter expert writing about my experiences and insights in software testing, application security, and life.
+I'm Kiefer, a Quality Assurance Engineer who owns quality end to end as the sole QA engineer for a regulated HR-tech and payroll EOR platform. I authored my organization's adopted risk-based QA framework, gate policy, and flaky-test policy, now applied across six product teams. I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than merely observed. I write here about software testing, application security, and life.
+
+San Diego, California — open to remote or relocation.
 
 [LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [Reddit](https://reddit.com/user/sutherlandsec) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
 
@@ -13,71 +15,69 @@ I'm Kiefer, a Quality Assurance Engineer and security subject-matter expert writ
 
 #### Testing
 
-Manual Testing | Test Automation | Acceptance Testing | Functional Testing | Integration Testing | System Testing | Regression Testing | Security Testing | API Testing | UI Testing | End-to-end Testing | Continuous Integration & Continuous Deployment (CI/CD)
-
-#### Technologies
-
-JavaScript | TypeScript | Python | SQL | Playwright | Postman | Jenkins | GitHub Actions | Git | GitHub Copilot | Claude Code | OpenAI Codex
+Risk-based Test Strategy | Test Architecture & Design | Unit Testing | Integration Testing | End-to-end Testing | Smoke Testing | API Testing | Regression Testing | Mutation Testing | Coverage Instrumentation & CI Enforcement | Flaky-test Triage | Quality Gate Design
 
 #### Methodology
 
-Test Architecture & Design | Defect Lifecycle Management | Software Development Lifecycle (SDLC) | Software Test Lifecycle (STLC) | Agile | Scrum | Shift-left Strategy
+Defect Lifecycle Management | Requirements Traceability | Accessibility (WCAG, axe-core) | Security & RBAC Testing | AI/LLM Feature Testing | Software Development Lifecycle (SDLC) | Software Test Lifecycle (STLC) | Agile | Scrum | Shift-left Strategy
 
-#### Soft Skills
+#### Technologies
 
-Critical & Analytical Thinking | Clear Communication | Negotiation & Diplomacy
+TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker | Postman/Newman | GitHub Actions | Jenkins | Supabase | Jira | Claude Code
 
 ## Experience
 
 ### Software Quality Assurance Engineer I
 
-#### TCWGlobal (HR Tech & Payroll SaaS) — Dec 2024 to Present
+#### TCWGlobal (Cloud Motion Technologies) — HR Tech & Payroll EOR SaaS — Dec 2024 to Present
 
-- Developed E2E and Smoke UI test suites with Playwright and TypeScript to achieve functional coverage of critical workflows.
-- Shifted quality gates left by adding CI/CD jobs for format, unit, integration, and security checks on pull requests and merges to develop and main branches.
-- Discovered and disclosed application security vulnerabilities by validating cross-site scripting (XSS), role-based access control (RBAC), and authentication (authz) controls.
-- Increased test automation coverage by leveraging GitHub Copilot, Claude Code, ChatGPT Codex, MCP servers, and custom skills.
-- Built a software testing lifecycle custom GPT for requirements analysis, test planning, and test case authoring with human-in-the-loop checks at each phase.
-
+- Sole QA engineer; own quality strategy, test infrastructure, and AI testing policy across six product teams.
+- Authored the company's adopted QA & Testing Framework — a risk-based standard that classifies each product and measures 20 test categories from real tool output.
+- Authored the adopted Gate Policy: test suites enter as advisory on pull requests and earn merge-blocking status only after a two-week zero-false-block trial; smoke and critical flows block unconditionally from day one.
+- Authored the adopted Flaky-Test Policy, defining flaky precisely — fails then passes on retry twice within a rolling seven-day window with no code change — to separate flake from a broken test.
+- Raised measured unit coverage on the flagship platform to 93.23% lines / 88.51% branches, with 2,969 tests across 908 suites, then enforced an 88% line and 91% function floor in CI so it cannot silently regress.
+- Built 11 CI workflows including a nightly critical-path E2E subset, a full weekly run, and a weekly mutation job; verified 8 required status checks on branch protection.
+- Triaged flaky E2E failures against 20 archived run-history snapshots, separating regression from flake with evidence rather than by re-running.
+- Built /QASweep, a four-agent Claude Code verification skill producing one scored scorecard per pull request or repository; its first run surfaced tests silently failing for weeks and zero E2E coverage on an admin route.
+- Advise six new products standing up testing from zero.
+- Discovered and disclosed application security and privacy defects, including sensitive data exposed through an unauthenticated client bundle and a messaging path that misclassified a high-risk user disclosure without escalation.
 
 ### Software Quality Assurance Analyst
 
-#### TCWGlobal (HR Tech & Payroll SaaS) — Oct 2023 to Dec 2024
+#### TCWGlobal — Oct 2023 to Dec 2024
 
-- Developed API smoke and role-based access control (RBAC) test suites providing test coverage for critical workflows using custom JavaScript assertions.
-- Authored and maintained functional and non-functional tests for payroll workflows, worker management, and minimum wage compliance.
-- Verified data consistency across single sign-on (SSO), payrolling, timekeeping, and payrolling integrations.
-- Verified regulatory compliance and branding accuracy across onboarding documentation, email templates, system-generated forms, and notifications.
-- Triaged, tested, and verified Jira tickets and GitHub pull requests.
-- Managed test-environment deployments with Jenkins.
-
+- Built an API smoke and role-based access control (RBAC) suite covering critical workflows with custom JavaScript assertions.
+- Authored functional and non-functional tests for payroll, worker management, and minimum-wage compliance; verified data consistency across single sign-on (SSO), payrolling, and timekeeping integrations.
+- Triaged and verified Jira tickets and pull requests; managed test-environment deployments with Jenkins.
 
 ### Junior System Administrator
 
-#### TCWGlobal — Dec 2022 to Oct 2023
+#### TCWGlobal — Feb 2022 to Oct 2023
 
-- Leveraged Jamf to automate enrollment, configuration, security and lifecycle management of Apple devices for the software development team.
-- Developed an IT hardware asset management system for SOC 2 Type 2 readiness.
-- Assisted with datacenter migration of networking equipment including switches, firewalls, and servers.
-- Provided ongoing IT support, systems, and network troubleshooting.
+- Automated Apple device lifecycle management with Jamf.
+- Built an IT asset-management system for SOC 2 Type 2 readiness.
+- Managed 150+ devices through secure decommissioning per NIST SP 800-88.
 
 ### IT Support Technician
 
-#### TCWGlobal — Feb 2022 to Dec 2022
+#### Foresight Sports — Jun 2021 to Feb 2022
 
-- Provided IT support and systems troubleshooting across Windows, macOS, and Linux devices and environments.
-- Performed network troubleshooting across OpenVPN, Cisco Meraki, and FS devices and software.
-- Assisted with installing and configuring networking devices and security cameras for a new office location. 
-- Performed device lifecycle management for over 150 devices across procurement, maintenance & optimation, to final secure decomissioning minimizing cybersecurity vulnerabilities, maintaining data compliance in accordance with NIST SP 800-88, reducing total hardware expenditure by 20%.
+- Hardware testing and cross-platform support.
 
+## Projects
 
-## EDUCATION
+- **qa_agent_exploratory** — exploratory testing agent built on Vercel's eve AI agent framework.
+- **kieferland.dev** — published "Lean SQA in a Regulated Industry: Building a Testing Framework That Scales."
 
-- **M.S., Cybersecurity & Information Assurance** — Western Governors University (2024)  
+## Education
+
+- **M.S., Cybersecurity & Information Assurance** — Western Governors University (2024)
 - **B.S., Cybersecurity & Information Assurance** — Western Governors University (2023)
 
-## CERTIFICATIONS
+## Certifications
 
+- ISC2 SSCP
+- AWS Certified Cloud Practitioner
 - CompTIA CySA+
 - CompTIA PenTest+
 - CompTIA Security+
