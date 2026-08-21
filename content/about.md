@@ -7,7 +7,7 @@ ShowToc: false
 
 I'm Kiefer, a Quality Assurance Engineer who owns quality end to end as the sole QA engineer for a regulated HR-tech and payroll EOR platform. 
 
-I authored my organization's risk-based QA and testing framework, AI & LLM testing and evaluation, gate policy, and flaky-test policy, now applied across three products.
+I authored my organization's software testing framework and AI/LLM testing framework, now applied across three products.
 
 I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than merely observed. 
 
