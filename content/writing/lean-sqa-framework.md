@@ -9,13 +9,19 @@ description: "A risk-based testing framework for regulated products: twenty test
 
 Over the last week I've been building a risk-based framework for testing software products and documenting evidence for audits.
 
-The products handle PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance, Vendor Management Systems (VMSs), Managed Service Providers (MSPs), and all kinds of other fun stuff. They serve clients in the US and in jurisdictions across the EU, the UK, and Canada.
+The products handle PII, worker and employer data, payrolling, staffing and placement, benefits, prescreening, compliance, Vendor Management Systems (VMSs), Managed Service Providers (MSPs), and all kinds of other fun stuff. 
+
+They serve clients in the US and in jurisdictions across the EU, the UK, and Canada.
 
 ## The Problem
 
 Testing had to keep pace with developers who had just picked up agentic coding tools, and it couldn't.
 
-Until the QA team adopted those tools too, testing our products was mostly manual. Regression testing was painful and slow, taking days of a small QA team's time. Automation was close to non-existent: a handful of unit and UI tests that never ran in CI, so they caught no regressions and told us nothing about quality.
+Until the QA team adopted those tools too, testing our products was mostly manual. 
+
+Regression testing was painful and slow, taking days of a small QA team's time. 
+
+Automation was close to non-existent: a handful of unit and UI tests that never ran in CI, so they caught no regressions and told us nothing about quality.
 
 ## The Solution
 
