@@ -5,7 +5,7 @@ ShowReadingTime: false
 ShowToc: false
 ---
 
-I'm Kiefer, an AI Assurance Engineer who owns quality end to end as the sole QA engineer for a regulated HR-tech and payroll EOR platform.
+I'm Kiefer, an AI Assurance Engineer. I own the automated testing, mutation testing, and authorization-verification function for a regulated HR-tech and payroll EOR platform, embedded directly in engineering.
 
 I authored my organization's software testing framework and AI/LLM testing framework, now applied across three products.
 
@@ -23,11 +23,11 @@ Risk-based Test Strategy | Test Architecture & Design | Unit Testing | Integrati
 
 #### Methodology
 
-Defect Lifecycle Management | Requirements Traceability | Accessibility (WCAG, axe-core) | Security & RBAC Testing | AI/LLM Feature Testing | AI Governance (NIST AI RMF, ISO/IEC 42001, OWASP LLM Top 10) | Software Development Lifecycle (SDLC) | Software Test Lifecycle (STLC) | Agile | Scrum | Shift-left Strategy
+Defect Lifecycle Management | Requirements Traceability | Accessibility (WCAG, axe-core) | Security & RBAC Testing | AI/LLM Feature Testing | AI Governance (NIST AI RMF, ISO/IEC 42001 and 23894, OWASP LLM Top 10, EU AI Act, NYC Local Law 144) | Software Development Lifecycle (SDLC) | Software Test Lifecycle (STLC) | Agile | Scrum | Shift-left Strategy
 
 #### Technologies
 
-TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker | axe-core | Postman/Newman | GitHub Actions | Jenkins | Supabase | Jira | Claude Code
+TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker | axe-core | Postman/Newman | PostgreSQL | Supabase | GitHub Actions | Jenkins | Next.js/React | Jira | Claude Code | Codex | MCP servers
 
 ## Experience
 
@@ -40,28 +40,29 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 - Established adversarial testing of AI features as an unconditional release blocker: prompt injection direct and indirect through retrieval and upload paths, sensitive information disclosure, agent least-privilege enumerated and verified programmatically rather than by stated intent, upload quarantine, cross-agent leakage, and excessive agency.
 - Run a two-tier mutation testing program: a unit-scope Stryker gate that fails the build below a break threshold of 60, and an integration-scope tier that mutates the server-action and authorization layer against a live database, held advisory until its integration coverage lands.
 - Own row-level security verification covering 88% of entities against live data, with a policy-weakening canary that deliberately loosens a policy to confirm the suite catches the regression, and automated policy coverage reporting that keeps authorization coverage visible and trending.
-- Co-authored an internal AI assurance audit capability mapping a product's AI surface against NIST AI RMF, ISO/IEC 42001 and 27001, SOC 2, GDPR, the EU AI Act, and the OWASP LLM Top 10.
+- Co-authored an internal AI assurance audit capability mapping a product's AI surface against NIST AI RMF, ISO/IEC 42001 and 27001, SOC 2, GDPR, the EU AI Act, and the OWASP LLM Top 10, including risk tiering of HR-domain AI as EU AI Act Annex III high-risk.
+- Maintain automated accessibility testing as a quality gate rather than a post-release check: vitest-axe assertions across ~71 components run inside the blocking unit job on every pull request, with axe-core/Playwright wired at the end-to-end tier.
+- Developed verification practices for AI-generated code and AI-generated test suites, targeting hallucinated interfaces, weakened assertions, and shallow coverage; built AI-assisted tooling adopted by product and engineering, including a brief-to-tests generator and a spec-stage test and security plan that risk-tiers features on data access, action reversibility, and external visibility.
+- Produce audit-ready evidence for compliance and leadership: machine-readable test reports, per-release entry and exit criteria with named sign-off, an exception ledger capped at two concurrent waivers per suite, and three-year audit-record retention for high-risk AI features.
 
 ### Software Quality Assurance Engineer I
 
 #### Regulated HR Tech & Payroll Platform — Dec 2024 to Aug 2026
 
-- Sole QA engineer; owned quality strategy, test infrastructure, and AI testing policy across six product teams.
+- Sole owner of the platform's automated testing function; set quality strategy and test infrastructure, and advised six product teams standing up testing from zero.
 - Authored the company's adopted QA & Testing Framework — a risk-based standard that classifies each product and measures 20 test categories from real tool output.
 - Authored the adopted Gate Policy: test suites enter as advisory on pull requests and earn merge-blocking status only after a two-week zero-false-block trial; smoke and critical flows block unconditionally from day one.
 - Authored the adopted Flaky-Test Policy, defining flaky precisely — fails then passes on retry twice within a rolling seven-day window with no code change — to separate flake from a broken test.
 - Built a multi-layer suite of 3,500+ tests spanning unit, integration, end-to-end, and database-layer testing; raised measured unit coverage on the flagship platform to 91.24% lines and 87.33% branches, then enforced 88% line, 88% statement, 91% function, and 83% branch floors in CI so it cannot silently regress.
 - Built 12 CI workflows including a nightly critical-path E2E subset, a full weekly run, and a weekly mutation job; verified 8 required status checks on branch protection.
 - Triaged flaky E2E failures against 20 archived run-history snapshots, separating regression from flake with evidence rather than by re-running.
-- Built /QASweep, a four-agent Claude Code verification skill producing one scored scorecard per pull request or repository; its first run surfaced tests silently failing for weeks and zero E2E coverage on an admin route.
 - Top contributor to the Playwright automation suite for a client-facing staffing platform during its migration from legacy PHP to TypeScript, covering company, order, job-description, and reporting flows plus an insecure-direct-object-reference authorization check, with multi-environment and tag-based CI execution.
 - Authored that repository's AI code-assistant instructions and reusable test-generation and review-refactor prompts, standardizing how AI-assisted tests were produced and reviewed.
-- Advised six new products standing up testing from zero.
-- Discovered and disclosed application security and privacy defects, including sensitive data exposed through an unauthenticated client bundle and a messaging path that misclassified a high-risk user disclosure without escalation.
+- Discovered and disclosed application security and privacy defects by validating cross-site scripting (XSS), role-based access control (RBAC), authentication, and sensitive-data-exposure controls.
 
 ### Software Quality Assurance Analyst
 
-#### Workforce Software Organization — Oct 2023 to Dec 2024
+#### Regulated HR Tech & Payroll Platform — Oct 2023 to Dec 2024
 
 - Built an API smoke and role-based access control (RBAC) suite covering critical workflows with custom JavaScript assertions.
 - Authored functional and non-functional tests for payroll, worker management, and minimum-wage compliance; verified data consistency across single sign-on (SSO), payrolling, and timekeeping integrations.
@@ -69,20 +70,28 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 
 ### Junior System Administrator
 
-#### Internal IT Operations — Feb 2022 to Oct 2023
+#### Regulated HR Tech & Payroll Platform — Dec 2022 to Oct 2023
 
-- Automated Apple device lifecycle management with Jamf.
-- Built an IT asset-management system for SOC 2 Type 2 readiness.
-- Managed 150+ devices through secure decommissioning per NIST SP 800-88.
+- Automated Apple device enrollment, configuration, security, and lifecycle management with Jamf.
+- Built an IT hardware asset-management system for SOC 2 Type 2 readiness.
+- Assisted with a datacenter migration of switches, firewalls, and servers.
 
 ### IT Support Technician
 
-#### Sports Technology Support — Jun 2021 to Feb 2022
+#### Regulated HR Tech & Payroll Platform — Feb 2022 to Dec 2022
 
-- Hardware testing and cross-platform support.
+- Managed 150+ devices from procurement through secure decommissioning per NIST SP 800-88, cutting hardware spend 20% while holding data-compliance requirements.
+- Supported Windows, macOS, and Linux environments; troubleshot networking across OpenVPN, Cisco Meraki, and FS devices.
+
+### Help Desk Technician
+
+#### Sports Technology Company — Jun 2021 to Feb 2022
+
+- Hardware testing and cross-platform customer support.
 
 ## Projects
 
+- **QASweep** — multi-agent QA verification harness. Runs a pull request or repository through four independent lenses in parallel — API, end-to-end, spec-diff, and security/authorization — then synthesizes them into one scored ship/hold scorecard. Built on Claude Code; its first run surfaced tests that had been silently failing for weeks and an admin route with zero end-to-end coverage.
 - **qa_agent_exploratory** — exploratory testing agent built on Vercel's eve AI agent framework.
 - **ai_testing_framework** — agent trust-layer framework carrying the OWASP LLM Top 10 and NIST AI RMF as machine-readable control catalogs, with adversarial eval adapters and OpenTelemetry tracing.
 - **kieferland.dev** — writing on testing methodology, AI assurance, and application security.
@@ -100,3 +109,7 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 - CompTIA Security+
 - CompTIA Network+
 - CompTIA A+
+
+## Continuous Learning
+
+[TryHackMe](https://tryhackme.com/p/sutherland) — 246 rooms completed, top 1% of users, 30 badges. Completed paths: Security Engineer, SOC Level 1, Blue Team, Jr Penetration Tester, Web Fundamentals.
