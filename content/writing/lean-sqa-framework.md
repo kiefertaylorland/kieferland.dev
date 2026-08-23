@@ -1,7 +1,7 @@
 ---
 title: "Lean SQA in a Regulated Industry: Twenty Test Categories, Five Phases"
 date: 2026-07-11
-tags: ["QA", "testing", "frameworks", "compliance"]
+tags: ["QA", "testing", "frameworks", "compliance", "appsec"]
 description: "A risk-based testing framework for regulated products: twenty test categories, a five-phase workflow, and a rubric that decides where QA effort goes."
 ---
 
