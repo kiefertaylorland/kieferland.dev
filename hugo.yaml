@@ -25,7 +25,7 @@ minify:
 
 params:
   env: production
-  description: I verify AI-built software before it breaks in front of paying users.
+  description: I verify AI-built software.
   keywords: [qa, testing, ai, evals, appsec, verification]
   defaultTheme: auto
   ShowReadingTime: true
