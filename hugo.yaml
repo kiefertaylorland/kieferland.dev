@@ -40,7 +40,7 @@ params:
 
   homeInfoParams:
     Title: Kiefer Land
-    Content: I verify AI-built software before it breaks in front of paying users. AI Assurance Engineer. M.S. Cybersecurity. I write about testing AI systems — and run fixed-fee verification audits for founders shipping with AI. Work with me →
+    Content: I verify AI-built software before it breaks in front of paying users. AI Assurance Engineer. M.S. Cybersecurity. I write about testing AI systems — and run fixed-fee verification audits for founders shipping with AI. [Work with me →](/services/)
 
   socialIcons:
     - name: linkedin
@@ -58,6 +58,10 @@ menu:
       name: Writing
       url: /writing/
       weight: 10
+    - identifier: services
+      name: Services
+      url: /services/
+      weight: 15
     - identifier: about
       name: About
       url: /about/
