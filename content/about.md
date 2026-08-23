@@ -80,7 +80,7 @@ TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker |
 
 #### Regulated HR Tech & Payroll Platform — Feb 2022 to Dec 2022
 
-- Managed 150+ devices from procurement through secure decommissioning per NIST SP 800-88, cutting hardware spend 20% while holding data-compliance requirements.
+- Managed 150+ devices from procurement through secure decommissioning per NIST SP 800-88, cutting hardware spend by 20% while meeting data-compliance requirements.
 - Supported Windows, macOS, and Linux environments; troubleshot networking across OpenVPN, Cisco Meraki, and FS devices.
 
 ### Help Desk Technician
