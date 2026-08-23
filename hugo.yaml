@@ -25,8 +25,8 @@ minify:
 
 params:
   env: production
-  description: Notes on software testing, application security, and life.
-  keywords: [qa, testing, ai, evals, verification]
+  description: Writing about my experiences and insights in software testing, quality assurance, artificial intelligence, application security, and life.
+  keywords: [qa, testing, ai, evals, appsec, verification]
   defaultTheme: auto
   ShowReadingTime: true
   ShowShareButtons: false
@@ -40,7 +40,7 @@ params:
 
   homeInfoParams:
     Title: Kiefer Land
-    Content: Notes on software testing, application security, and life.
+    Content: Writing about my experiences and insights in software testing, quality assurance, artificial intelligence, application security, and life.
 
   socialIcons:
     - name: linkedin
