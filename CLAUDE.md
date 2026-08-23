@@ -6,6 +6,11 @@ Config lives in `hugo.yaml` (not hugo.toml). Content in `content/`, posts under
 (`.github/workflows/deploy.yml`). Build locally with `hugo build` after
 `git submodule update --init`.
 
+Standalone pages (`content/about.md`, `content/services.md`, `content/contact.md`)
+render at `/about/`, `/services/`, `/contact/`; pages that should stay out of
+`/rss.xml` set `hiddenInRss: true` in front matter. Release notes live in
+`CHANGELOG.md`, planned work in `TODOS.md`, and the current version in `VERSION`.
+
 ## Skill routing
 
 When the user's request matches an available skill, invoke it via the Skill tool. When in doubt, invoke the skill.

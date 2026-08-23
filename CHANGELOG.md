@@ -16,4 +16,4 @@ Format: `## [MAJOR.MINOR.PATCH.MICRO] - YYYY-MM-DD` with Added / Changed / Fixed
 
 - Homepage "Work with me →" is now a live link to the Services page.
 - About page keeps a professional-only framing (writing topics no longer include "life"; personal posts live under Writing untagged).
-- Project guidance for AI-assisted development added in `CLAUDE.md`.
+- `CLAUDE.md` now carries project guidance for AI-assisted development — repo structure, local build steps, and skill routing.
