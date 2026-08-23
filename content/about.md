@@ -11,7 +11,7 @@ I authored my organization's software testing framework and AI/LLM testing frame
 
 I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than merely observed.
 
-I write here about my experiences and insights in software testing, quality assurance, artificial intelligence, application security, and life. Currently residing in San Diego, California.
+I write here about my experiences and insights in software testing, quality assurance, artificial intelligence, and application security. Currently residing in San Diego, California.
 
 [LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
 
