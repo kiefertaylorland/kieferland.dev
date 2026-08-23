@@ -41,6 +41,7 @@ params:
   homeInfoParams:
     Title: Kiefer Land
     Content: I verify AI-built software before it breaks in front of paying users.
+    SocialContent: AI Assurance Engineer. M.S. Cybersecurity. I write about testing AI systems — and run fixed-fee verification audits for founders shipping with AI.
 
   socialIcons:
     - name: linkedin
