@@ -25,7 +25,7 @@ minify:
 
 params:
   env: production
-  description: Writing about my experiences and insights in software testing, quality assurance, artificial intelligence, application security, and life.
+  description: I verify AI-built software before it breaks in front of paying users.
   keywords: [qa, testing, ai, evals, appsec, verification]
   defaultTheme: auto
   ShowReadingTime: true
@@ -40,7 +40,7 @@ params:
 
   homeInfoParams:
     Title: Kiefer Land
-    Content: Writing about my experiences and insights in software testing, quality assurance, artificial intelligence, application security, and life.
+    Content: I verify AI-built software before it breaks in front of paying users.
 
   socialIcons:
     - name: linkedin
