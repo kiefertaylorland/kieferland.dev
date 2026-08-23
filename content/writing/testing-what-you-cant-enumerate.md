@@ -1,7 +1,7 @@
 ---
 title: "Testing What You Can't Enumerate: A QA Framework for AI Agents and LLMs"
 date: 2026-08-10
-tags: ["QA", "testing", "AI", "LLM", "security", "compliance"]
+tags: ["QA", "testing", "AI", "LLM", "appsec", "compliance"]
 description: "Extending a risk-based testing framework to AI agents and LLM-backed features, where the input space is unbounded and percentage coverage stops meaning anything."
 ---
 
