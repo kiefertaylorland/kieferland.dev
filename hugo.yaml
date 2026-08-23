@@ -66,6 +66,10 @@ menu:
       name: About
       url: /about/
       weight: 20
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 25
 
 markup:
   goldmark:
