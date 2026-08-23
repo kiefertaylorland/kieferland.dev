@@ -23,7 +23,7 @@ Risk-based Test Strategy | Test Architecture & Design | Unit Testing | Integrati
 
 #### Methodology
 
-Defect Lifecycle Management | Requirements Traceability | Accessibility (WCAG, axe-core) | Security & RBAC Testing | AI/LLM Feature Testing | AI Governance (NIST AI RMF, ISO/IEC 42001 and 23894, OWASP LLM Top 10, EU AI Act, NYC Local Law 144) | Software Development Lifecycle (SDLC) | Software Test Lifecycle (STLC) | Agile | Scrum | Shift-left Strategy
+Defect Lifecycle Management | Requirements Traceability | Accessibility (WCAG, axe-core) | Security & RBAC Testing | AI/LLM Feature Testing | AI Governance (NIST AI RMF, ISO/IEC 42001 and ISO/IEC 23894, OWASP LLM Top 10, EU AI Act, NYC Local Law 144) | Software Development Lifecycle (SDLC) | Software Test Lifecycle (STLC) | Agile | Scrum | Shift-left Strategy
 
 #### Technologies
 
