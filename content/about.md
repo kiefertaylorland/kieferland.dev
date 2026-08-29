@@ -5,13 +5,13 @@ ShowReadingTime: false
 ShowToc: false
 ---
 
-I'm Kiefer, an AI Assurance Engineer. I own the automated testing, mutation testing, and authorization-verification function for a regulated HR-tech and payroll EOR platform, embedded directly in engineering.
+I'm Kiefer, an AI Assurance Engineer. I own the automated testing, AI/LLM evals, and red teaming for a regulated HR-tech and payroll EOR platform, embedded directly in engineering.
 
 I authored my organization's software testing framework and AI/LLM testing framework, now applied across three products.
 
-I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than merely observed.
+I'm strongest at deciding what is worth testing under real capacity constraints, and at proving coverage is enforced rather than observed.
 
-I write here about my experiences and insights in software testing, quality assurance, artificial intelligence, and application security. Currently residing in San Diego, California.
+I write here about my experiences and insights in software testing, quality assurance, artificial intelligence, and application security.
 
 [LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
 
@@ -19,7 +19,7 @@ I write here about my experiences and insights in software testing, quality assu
 
 #### Testing
 
-Risk-based Test Strategy | Test Architecture & Design | Unit Testing | Integration Testing | End-to-end Testing | Smoke Testing | API Testing | Regression Testing | Mutation Testing | Coverage Instrumentation & CI Enforcement | Flaky-test Triage | Quality Gate Design
+AI/LLM Evals | AI/LLM Red Teaming | Application Security | Risk-based Test Strategy | Test Architecture & Design | Unit Testing | Integration Testing | End-to-end Testing | Smoke Testing | API Testing | Regression Testing | Mutation Testing | Coverage Instrumentation & CI Enforcement | Flaky-test Triage | Quality Gate Design
 
 #### Methodology
 
@@ -27,7 +27,7 @@ Defect Lifecycle Management | Requirements Traceability | Accessibility (WCAG, a
 
 #### Technologies
 
-TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker | axe-core | Postman/Newman | PostgreSQL | Supabase | GitHub Actions | Jenkins | Next.js/React | Jira | Claude Code | Codex | MCP servers
+Promptfoo | TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP | Stryker | axe-core | Postman/Newman | PostgreSQL | Supabase | GitHub Actions | Jenkins | Next.js/React | Jira | Claude Code | Codex | MCP servers
 
 ## Experience
 
