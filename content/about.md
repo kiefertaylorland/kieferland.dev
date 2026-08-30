@@ -103,12 +103,15 @@ Promptfoo | TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP
 
 ## Certifications
 
-- AWS Certified Cloud Practitioner
-- CompTIA CySA+
-- CompTIA PenTest+
-- CompTIA Security+
-- CompTIA Network+
-- CompTIA A+
+- [CompTIA Security Analytics Professional](https://www.credly.com/badges/f985eeb9-e895-421a-9a32-1a42057cf57d/public_url)
+- [CompTIA Secure Infrastructure Specialist](https://www.credly.com/badges/633863e5-6b41-43b0-aa50-24a60e77fe6c/public_url)
+- [CompTIA CySA+](https://www.credly.com/badges/22202c28-b670-4084-965f-d7be3569c27a/public_url)
+- [CompTIA PenTest+](https://www.credly.com/badges/4c4fed40-f79d-4ccf-997f-944371472f82/public_url)
+- [CompTIA Security+](https://www.credly.com/badges/503e9d89-2e63-4b60-b4c0-10a70dfd6ba7/public_url)
+- [CompTIA Network+](https://www.credly.com/badges/beaa0168-0d1d-4258-a1ca-3a363b6ae4c6/public_url)
+- [CompTIA A+](https://www.credly.com/badges/b296e180-af31-4db8-b872-da7e16fe1ff1/public_url)
+- [CompTIA Project+](https://www.credly.com/badges/b16ffac7-df1a-4613-a6a5-09f85a7ca9b9/public_url)
+- [AWS Certified Cloud Practitioner](https://www.credly.com/badges/029a5b18-00de-42d1-a01b-9008e6f45834/public_url)
 
 ## Continuous Learning
 
