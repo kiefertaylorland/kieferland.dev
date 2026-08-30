@@ -115,4 +115,4 @@ Promptfoo | TypeScript | JavaScript | Python | SQL | Playwright | Vitest | pgTAP
 
 ## Continuous Learning
 
-[TryHackMe](https://tryhackme.com/p/sutherland) — 246 rooms completed, top 1% of users, 30 badges. Completed paths: Security Engineer, SOC Level 1, Blue Team, Jr Penetration Tester, Web Fundamentals.
+[TryHackMe](https://tryhackme.com/p/sutherland) — 251 rooms completed, top 1% of users, 32 badges. Completed paths: Security Engineer, SOC Level 1, Blue Team, Jr Penetration Tester, Web Fundamentals.
