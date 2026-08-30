@@ -13,7 +13,7 @@ I'm strongest at deciding what is worth testing under real capacity constraints,
 
 I write here about my experiences and insights in software testing, quality assurance, artificial intelligence, and application security.
 
-[LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [TryHackMe](https://tryhackme.com/p/sutherland) | [Email](mailto:kiefertaylorland@gmail.com)
+[Email](mailto:kiefertaylorland@gmail.com) | [LinkedIn](https://linkedin.com/in/kieferland) | [GitHub](https://github.com/kiefertaylorland) | [TryHackMe Top 1%](https://tryhackme.com/p/sutherland)
 
 ## Core Competencies
 
