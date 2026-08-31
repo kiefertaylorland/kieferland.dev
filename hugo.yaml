@@ -49,6 +49,8 @@ params:
       url: https://github.com/kiefertaylorland    
     - name: tryhackme
       url: https://tryhackme.com/p/sutherland
+    - name: email
+      url: mailto:kiefertaylorland@gmail.com
 
 menu:
   main:
