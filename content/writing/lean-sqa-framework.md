@@ -78,7 +78,7 @@ The meta framework defines the following test categories.
 
 ## The Framework
 
-Adopt the framewok to your projects.
+Adopt the framework for your projects.
 
 
 | **Category** | **Tooling** | **Coverage %** | **CI/CD-gated** | **Priority Level** | **Owner** | **Revisit trigger** |
