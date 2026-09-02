@@ -42,7 +42,7 @@ Working from frameworks such as the *test pyramid* and from industry best practi
 
 ## The Defaults
 
-Every public facing project includes the following default test suites:
+Every public-facing project includes the following default test suites:
 
 - **Unit Testing**
 - **System Integration Testing**
