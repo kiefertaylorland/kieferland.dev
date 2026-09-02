@@ -114,7 +114,7 @@ An example of the meta framework applied to a fictitious project.
 | **Integration** | RLS + pgTAP | % of entities covered | ✅ | - | Dev | - |
 | **System / E2E** | Playwright |  % of HIGH-risk modules covered | ✅ | - | QA | — |
 | **Smoke** | Playwright | 100% of critical paths | ✅ | - | QA | - |
-| **API** | Postman | None | ✅ | - | QA |
+| **API / Interface** | Postman | None | ✅ | - | QA | - |
 | **Regression** | Unit + E2E suites on cadence | Currently satisfied via unit/E2E gates | ✅ | - | QA | — |
 | **Mutation** | Stryker | - | 🛑 | - | Dev | - |
 | **Security — Access Control & Data Boundaries** | RLS + pgTAP | High % of entities with RLS tests | 🛑 | - | QA | - |
