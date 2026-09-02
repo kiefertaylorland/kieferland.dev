@@ -19,7 +19,7 @@ As agentic coding tools increasingly got better and faster at writing code, the 
 
 Up to this point, testing our products was mostly manual. Regression testing was painful and slow, taking days for a small QA team to complete. 
 
-Automation was close to non-existent. A handful of unit and UI tests that never ran in CI so regressions were ever caught and the testing told us nothing about quality.
+Automation was close to non-existent. A handful of unit and UI tests never ran in CI, so regressions were never caught and the testing told us nothing about quality.
 
 Sound familiar?
 
