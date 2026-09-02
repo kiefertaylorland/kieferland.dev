@@ -1,7 +1,7 @@
 ---
 title: "Lean Software Quality Assurance in a Regulated Industry"
 date: 2026-07-11
-tags: ["quality assurance", "QA", "software testing", "frameworks", "compliance", "software development engineer in test", "SDET", "AI", "Agents", "Agentic Development"]
+tags: ["quality assurance", "QA", "software testing", "frameworks", "compliance", "SDET", "AI", "Agents", "Agentic Development"]
 description: "A risk-based software testing meta framework for regulated products."
 ---
 
@@ -54,7 +54,7 @@ Every public-facing project includes the following default test suites:
 The meta framework defines the following test categories.
 
 | **Category** | **Definition** |
-| :--- | :--- |
+| :---: | :---: |
 | **Unit** | Smallest testable units in isolation |
 | **Integration** | Components working together. Database layer, service layer, cross-system layer.  |
 | **Integration — Third-Party Data Handling** | Compliance posture of data exchanged with external vendors. |
@@ -82,7 +82,7 @@ Adopt the framework for your projects.
 
 
 | **Category** | **Tooling** | **Coverage %** | **CI/CD-gated** | **Priority Level** | **Owner** | **Revisit trigger** |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Unit** | | | | | | |
 | **Integration** | | | | | | |
 | **Integration — Third-Party Data Handling** | | | | | | |
